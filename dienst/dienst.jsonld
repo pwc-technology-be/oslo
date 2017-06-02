@@ -15,7 +15,8 @@
 	  "BedrijfsGebeurtenis":"http://data.europa.eu/m8g/BusinessEvent",
 	  "LevensGebeurtenis":"http://data.europa.eu/m8g/LifeEvent",
 	  "Gebeurtenis":"http://data.europa.eu/m8g/Event",
-	  "PubliekeDienstverlening":"http://purl.org/vocab/cpsv#PublicService",  "teConsumerenVia":{
+	  "PubliekeDienstverlening":"http://purl.org/vocab/cpsv#PublicService",  
+	  "teConsumerenVia":{
 	    "@id":"http://data.europa.eu/m8g/hasChannel",
 	    "@type":"http://data.europa.eu/m8g/Channel",
 	    "@container":"@set"
@@ -91,7 +92,8 @@
 	    "@id":"http://purl.org/vocab/cpsv#produces",
 	    "@type":"http://data.europa.eu/m8g/Output",
 	    "@container":"@set"
-	  },  "adres":{
+	  },  
+	  "adres":{
 	    "@id":"http://data.europa.eu/m8g/hasAddress",
 	    "@type":"http://www.w3.org/ns/locn#Address"
 	  },
@@ -208,13 +210,13 @@
 	  },
 	  "logo":{
 	    "@id":"http://schema.org/logo",
-	    "@type":""
+	    "@type":"@id"
 	  },
 	  "werkingsgebied":{
-	    "@id":"http://purl.org/dc/terms/spatial",
+	    "@id":"http://purl.org/dc/terms/spatial"
 	  },
 	  "valuta":{
-	    "@id":"http://data.europa.eu/m8g/currency",
+	    "@id":"http://data.europa.eu/m8g/currency"
 	  },
 	  "waarde":{
 	    "@id":"http://data.europa.eu/m8g/value",
