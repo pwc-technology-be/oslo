@@ -47,7 +47,7 @@
                         
                         <dt>Laatste aanpassing</dt>
 
-                        <dd>2017-05-09
+                        <dd>2017-05-26
                         </dd>
                         
 
@@ -269,7 +269,7 @@
       </div>
       <div class="region region--no-space-top">
           <div class="layout layout--normal">
-            <img src="melding-datamodel-uml.jpg" alt="UML diagram Melding Basis AP"/>
+            <img src="http://52.50.205.146:8890/aiv/melding-datamodel-uml.jpg" alt="UML diagram Melding Basis AP"/>
           </div>
       </div>
       
@@ -458,6 +458,112 @@ attribuut: [
       
       <div class="region region--no-space-top">
           <div class="layout layout--normal">
+            <h2 class="h2" id="Eigenschap"><a href="http://data.vlaanderen.be/ns/melding#Eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Eigenschap" data-placement="right" target="_blank">CodelijstWaarde</a></h2>
+            <div class="grid">
+              <div class="col--9-12 col--1-1--s typography">
+                    <div class="region region--no-space-top">
+                    <div><p>De waarde uit een codelijst.</p></div>
+                    <div><p></p></div>
+                    
+                    
+                    
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: waarde, werd toegewezen aan.</p></div>
+                    </div>
+                    <div class="u-table-overflow">
+                        <table class="data-table">
+                          <thead>
+                          <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                            <th class="data-table__header-title--sortable">Verwacht Type</th>
+                            <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                            <th class="data-table__header-title--sortable">Beschrijving</th>
+                            <th class="data-table__header-title--sortable">Gebruik</th>
+                            <th class="data-table__header-title--sortable">Codelijst</th>
+                          </tr>
+                          </thead>
+
+                          <tbody class="supertype">
+                          
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value" data-placement="right">
+                                
+                                waarde
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
+                            <td>1 .. 1</td>
+                            <td property="rdfs:comment">Een waarde van de codelijst.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#wasAttributedTo">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://www.w3.org/ns/prov#wasAttributedTo" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#wasAttributedTo" data-placement="right">
+                                
+                                werd toegewezen aan
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">Het toewijzen van de CodelijstWaarde aan een Agent (Publieke Organisatie) die verantwoordelijk is voor het behandelen van meldingen op deze Eigenschap indien de Eigenschap een bepaalde waarde heeft.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          </tbody>
+                        </table>
+                        
+                    </div>                    
+                    <div class="example">
+                      <span>Voorbeeld JSON-LD:</span>
+                      <div style="background:#efefef">
+                        <pre class="prettyprint">
+"@id": "http://data.vlaanderen.be/id/eigenschap/led/INSTELLINGSNAAM",
+"@type": "Eigenschap"
+"label": "Instellingsnaam",
+"codelijst": [
+  {
+    "@id": "http://example.org/A",
+    "@type": "CodelijstWaarde",
+    "waarde": "Instelling A",
+    "werdtoegewezenAan": "https://wegwijs.vlaanderen.be/#/organisations/c524b10c-9ab6-4013-864e-d1157acd8199"
+  },
+  {
+    "@id": "http://example.org/B",
+    "@type": "CodelijstWaarde",
+    "waarde": "https://wegwijs.vlaanderen.be/#/organisations/325871be-5ded-444f-8333-93caa81ef1b2",
+    "werdtoegewezenAan": "Instelling B"
+  },
+  {
+    "@id": "http://example.org/C",
+    "@type": "CodelijstWaarde",
+    "waarde": "Instelling B",
+    "werdtoegewezenAan": "https://wegwijs.vlaanderen.be/#/organisations/b3b1e9c4-fdc5-4273-b595-be67844ee625"
+  }
+],
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <div class="region region--no-space-top">
+          <div class="layout layout--normal">
             <h2 class="h2" id="Eigenschap"><a href="http://data.vlaanderen.be/ns/melding#Eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Eigenschap" data-placement="right" target="_blank">Eigenschap</a></h2>
             <div class="grid">
               <div class="col--9-12 col--1-1--s typography">
@@ -467,7 +573,7 @@ attribuut: [
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: label.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: label, codelijst, verplicht, werd toegewezen aan.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -504,6 +610,41 @@ attribuut: [
                           </tr>
                           
                           
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#codelijst">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#codelijst" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#codelijst" data-placement="right">
+                                
+                                codelijst
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-placement="right">CodelijstWaarde</a></td>
+                            <td>0 .. *</td>
+                            <td property="rdfs:comment">Associeert de Eigenschap met mogelijk codelijst waarden die voor de Eigenschap gebruikt kunnen worden.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+
+                          
+                          <tr typeof="rdfs:Property" resource="https://www.w3.org/ns/hydra/core#required">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="https://www.w3.org/ns/hydra/core#required" data-toggle="tooltip" data-content="https://www.w3.org/ns/hydra/core#required" data-placement="right">
+                                
+                                verplicht
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">True als de eigenschap verplicht mee te sturen is, anders false.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
                           
                           <tr typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#wasAttributedTo">
                             <td>
@@ -517,8 +658,8 @@ attribuut: [
                             </td>
                             <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
                             <td>0 .. 1</td>
-                            <td property="rdfs:comment">Het toewijzen van een entiteit aan een Agent.</td>
-                            <td property="vann:usageNote"></td>
+                            <td property="rdfs:comment">Het toewijzen van de Eigenschap aan een Agent (Publieke Organisatie) die verantwoordelijk is voor het behandelen van meldingen op deze Eigenschap.</td>
+                            <td property="vann:usageNote">Dit attribuut wordt genegeerd indien werdToegewezenAan gedefinieerd is op niveau van CodelijstWaarde.</td>
                             <td></td>
                           </tr>
                           
@@ -531,10 +672,11 @@ attribuut: [
                       <span>Voorbeeld JSON-LD:</span>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
-"@id": "http://data.vlaanderen.be/id/eigenschap/grb/geometrie",
+"@id": "http://data.vlaanderen.be/id/eigenschap/led/instellingsnaam",
 "@type": "Eigenschap",
-"label": "Geometrie",
-"werdToegewezenAan": "http://data.vlaanderen.be/id/publiekeorganisatie/OVO002949"
+"label": "Instellingsnaam",
+"werdToegewezenAan": "http://data.vlaanderen.be/id/publiekeorganisatie/OVO002949",
+"verplicht": false
 </pre>
                       </div>
                     </div>
@@ -1458,8 +1600,8 @@ attribuut: [
     "wkt": "POLYGON((199366.326445378 173495.694970526,199374.355501384 173489.410298523,199364.348141372 173477.521786515,199356.552621372 173484.083834518,199366.326445378 173495.694970526))"
   },
   "waarde": "bouw, verbouwing of sloping van een gebouw"
- },
-],
+ }
+]
 </pre>
                       </div>
                     </div>
