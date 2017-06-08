@@ -253,6 +253,10 @@
 	  "verwerkingstijd":{
 	    "@id":"http://data.europa.eu/m8g/processingTime",
 	    "@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+	  },
+	  "heeftStatus":{
+	    "@id":"http://data.vlaanderen.be/ns/dienst#heeftStatus",
+	    "@type":"http://data.vlaanderen.be/ns/dienst#Status"
 	  }
 	}
 }
