@@ -260,6 +260,8 @@
                             
                             <a href="#MeldingBody">MeldingBody</a> |
                             
+                            <a href="#Geometrie">MeldingsobjectAttribuut</a> |
+                            
                          </p>
                     </div>
                     
@@ -283,7 +285,7 @@
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: heeftParticiperende.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: speelt rol.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -307,14 +309,14 @@
                             <code property="rdfs:label">
                                 <a href="http://data.europa.eu/m8g/playsRole" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/playsRole" data-placement="right">
                                 
-                                heeftParticiperende
+                                speelt rol
                                 
                                 </a>
                             </code>
                             </td>
                             <td><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participatie</a></td>
                             <td>1 .. *</td>
-                            <td property="rdfs:comment">TODO</td>
+                            <td property="rdfs:comment">De relatie tussen een Melding en een Agent die een rol speelt in de Melding.</td>
                             <td property="vann:usageNote"></td>
                             <td></td>
                           </tr>
@@ -354,7 +356,7 @@
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: beschrijving, titel, attribuut.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: attribuut, beschrijving, titel.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -393,6 +395,26 @@
                           
                           
                           
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#eigenschap">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#eigenschap" data-placement="right">
+                                
+                                eigenschap
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/melding#Eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Eigenschap" data-placement="right">Eigenschap</a></td>
+                            <td>0 .. *</td>
+                            <td property="rdfs:comment">Verwijst naar de Eigenschap die deel uitmaakt van de Dataset.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          
+                          
                           <tr typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
                             <td>
                             <code property="rdfs:label">
@@ -411,26 +433,6 @@
                           </tr>
                           
                           
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#attribuut">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/melding#attribuut" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#attribuut" data-placement="right">
-                                
-                                attribuut
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/melding#Eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Eigenschap" data-placement="right">Eigenschap</a></td>
-                            <td>0 .. *</td>
-                            <td property="rdfs:comment">Een eigenschap waarover de dataset informatie bevat.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
                           </tbody>
                         </table>
                         
@@ -444,11 +446,12 @@
 "titel": "Grootschalig Referentie Bestand",
 "beschrijving": "Het Grootschalig Referentie Bestand of Basiskaart Vlaanderen (GRB) is een 
 geografisch informatiesysteem dat dient als topografische referentie voor Vlaanderen.",
-attribuut: [
+"eigenschap": [
   "http://data.vlaanderen.be/id/eigenschap/grb/geometrie", 
   "http://data.vlaanderen.be/id/eigenschap/grb/adres", 
   "http://data.vlaanderen.be/id/eigenschap/grb/type"
-]</pre>
+]
+</pre>
                       </div>
                     </div>
               </div>
@@ -573,7 +576,7 @@ attribuut: [
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: label, codelijst, verplicht, werd toegewezen aan.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: bereik, codelijst, label, verplicht, regex, werd toegewezen aan.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -589,6 +592,42 @@ attribuut: [
                           </thead>
 
                           <tbody class="supertype">
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#bereik">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#bereik" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#bereik" data-placement="right">
+                                
+                                bereik
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://www.w3.org/2000/01/rdf-schema#Datatype" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Datatype" data-placement="right">Datatype</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">Geeft de verwachte waarde aan van de Eigenschap in de vorm van een Datatype.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#codelijst">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#codelijst" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#codelijst" data-placement="right">
+                                
+                                codelijst
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-placement="right">CodelijstWaarde</a></td>
+                            <td>0 .. *</td>
+                            <td property="rdfs:comment">Associeert de Eigenschap met mogelijk codelijst waarden die voor de Eigenschap gebruikt kunnen worden.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
                           
                           
                           
@@ -610,19 +649,20 @@ attribuut: [
                           </tr>
                           
                           
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#codelijst">
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#regex">
                             <td>
                             <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/melding#codelijst" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#codelijst" data-placement="right">
+                                <a href="http://data.vlaanderen.be/ns/melding#regex" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#regex" data-placement="right">
                                 
-                                codelijst
+                                regex
                                 
                                 </a>
                             </code>
                             </td>
-                            <td><a href="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#CodelijstWaarde" data-placement="right">CodelijstWaarde</a></td>
-                            <td>0 .. *</td>
-                            <td property="rdfs:comment">Associeert de Eigenschap met mogelijk codelijst waarden die voor de Eigenschap gebruikt kunnen worden.</td>
+                            <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">Een regular expression die het verwachte patroon aangeeft voor de waarden van de Eigenschap.</td>
                             <td property="vann:usageNote"></td>
                             <td></td>
                           </tr>
@@ -672,11 +712,12 @@ attribuut: [
                       <span>Voorbeeld JSON-LD:</span>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
-"@id": "http://data.vlaanderen.be/id/eigenschap/led/instellingsnaam",
-"@type": "Eigenschap",
-"label": "Instellingsnaam",
-"werdToegewezenAan": "http://data.vlaanderen.be/id/publiekeorganisatie/OVO002949",
-"verplicht": false
+"@id": "http://data.vlaanderen.be/id/eigenschap/led/UITREIKINGSDATUM",
+"label": "Uitreikingsdatum",
+"werdToegewezenAan": "https://wegwijs.vlaanderen.be/#/organisations/5c63f9ff-177d-4f2b-9922-033745d81b6a",
+"verplicht": false,
+"datatype": "xsd:Date",
+"regex": "^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$"
 </pre>
                       </div>
                     </div>
@@ -867,7 +908,7 @@ attribuut: [
                             </td>
                             <td><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participatie</a></td>
                             <td> .. </td>
-                            <td property="rdfs:comment">TODO</td>
+                            <td property="rdfs:comment">De relatie tussen een Melding en een Agent die een rol speelt in de Melding.</td>
                             <td property="vann:usageNote"></td>
                             <td></td>
                           </tr>
@@ -946,7 +987,7 @@ attribuut: [
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: heeftBron, gerelateerdeBody, heeftToestand.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: attribuut, heeftBron, heeftStatus, gerelateerdeBody, heeftToestand.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -965,6 +1006,25 @@ attribuut: [
                           
                           
                           
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#attribuut">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#attribuut" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#attribuut" data-placement="right">
+                                
+                                attribuut
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="ttp://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut" data-toggle="tooltip" data-content="ttp://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut" data-placement="right">MeldingsobjectAttribuut</a></td>
+                            <td>1 .. 1</td>
+                            <td property="rdfs:comment">Refereert naar een Eigenschap die deel uitmaakt van het Meldingsobject.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          
                           <tr typeof="rdfs:Property" resource="http://www.w3.org/ns/oa#hasSource">
                             <td>
                             <code property="rdfs:label">
@@ -979,6 +1039,26 @@ attribuut: [
                             <td>1 .. 1</td>
                             <td property="rdfs:comment">De bron (Dataset) waar het Meldingsobject werd uit afgeleid.</td>
                             <td property="vann:usageNote">Dit attribuut is relevant in het kader van meldingen op concrete informatievelden zoals foutieve of ontbrekende gegevens (terugmeldingen).</td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#heeftStatus">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#heeftStatus" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#heeftStatus" data-placement="right">
+                                
+                                heeftStatus
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/melding#Status" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Status" data-placement="right">Status</a></td>
+                            <td>1 .. *</td>
+                            <td property="rdfs:comment">De Status verbonden aan het Meldingsobject.</td>
+                            <td property="vann:usageNote">Wanneer voor de melding meerdere Meldingsobjecten werden meegegeven die elk door andere Agents worden afgehandeld laat deze eigenschap toe om per Meldingsobject een status mee te geven. De Status van de Melding kan pas behandeld zijn als alle Meldingsobjecten behandeld werden.</td>
                             <td></td>
                           </tr>
                           
@@ -1054,17 +1134,23 @@ attribuut: [
   {
     "@id": "http://data.vlaanderen.be/id/gebouw/1234",
     "@type": "Meldingsobject",
-    "http://data.vlaanderen.be/id/eigenschap/grb/geometrie": "POLYGON((199421.08497341 173684.809594657,199418.50276541 173689.236858658,199416.260077409 173687.928762659,199412.834989406 173693.801018663,199424.732781418 173700.740538668,199427.561133415 173695.891322665,199426.649069421 173695.359354664,199429.82801342 173689.909050662,199421.08497341 173684.809594657))",
+    "attribuut" : [ 
+      {
+        "@type": "MeldingsobjectAttribuut",
+        "eigenschap" : "https://meldingen.vlaanderen.be/api/v1/dataset/grb/geometrie",
+        "huidigeWaarde": "POLYGON((199421.08497341 173684.809594657,199418.50276541 173689.236858658,199416.260077409 173687.928762659,199412.834989406 173693.801018663,199424.732781418 173700.740538668,199427.561133415 173695.891322665,199426.649069421 173695.359354664,199429.82801342 173689.909050662,199421.08497341 173684.809594657))",
+      }
+    ]
     "gerelateerdeBody": {
       "geometrie": {
         "wkt": "POLYGON((199366.326445378 173495.694970526,199374.355501384 173489.410298523,199364.348141372 173477.521786515,199356.552621372 173484.083834518,199366.326445378 173495.694970526))"
       },
-      "waarde": "bouw, verbouwing of sloping van een gebouw"
+      "waarde": "binnen de getekende geometrie is er een verbouwing van een gebouw"
     },
     "heeftToestand": {
       "datumVaststelling": "2017-03-20 00:00:00.000"
     },
-    "heeftBron": { "@id": "http://data.vlaanderen.be/id/dataset/gebouwenregister" },
+    "heeftBron": "http://data.vlaanderen.be/id/dataset/gebouwenregister",
     "werdToegewezenAan": "http://data.vlaanderen.be/id/publiekeorganisatie/OVO002949"
   }
 ]
@@ -1180,7 +1266,7 @@ attribuut: [
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: beschrijving, statusdatum, statusType, statuswijzigingDoor, statuswijzigingObject.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: beschrijving, statusdatum, statusType, statuswijzigingDoor.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -1273,26 +1359,6 @@ attribuut: [
                             <td>1 .. 1</td>
                             <td property="rdfs:comment">De Agent die deze status heeft geactiveerd.</td>
                             <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#statuswijzigingObject">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/melding#statuswijzigingObject" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#statuswijzigingObject" data-placement="right">
-                                
-                                statuswijzigingObject
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/melding#Meldingsobject" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Meldingsobject" data-placement="right">Meldingsobject</a></td>
-                            <td>0 .. *</td>
-                            <td property="rdfs:comment">Geeft aan welk(e) meldingsobject(en) door de status werden aangeraakt of behandeld.</td>
-                            <td property="vann:usageNote">Wanneer voor een melding meerdere Agents betrokken zijn in de afhandeling laat deze eigenschap toe om per statuswijziging door &#233;&#233;n van de Agents aan te geven op welke Meldingsobjecten de Status betrekking heeft.</td>
                             <td></td>
                           </tr>
                           
@@ -1611,7 +1677,126 @@ attribuut: [
 
 
       </div>
+
+      <div class="region region--no-space-top">
+          <div class="layout layout--normal">
+            <h3 class="h3" id="Geometrie"><a href="http://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut" data-placement="right" target="_blank">MeldingsobjectAttribuut</a></h3>
+            <div class="grid">
+              <div class="col--9-12 col--1-1--s typography">
+                    <div class="region region--no-space-top">
+                    <div><p>Beschrijft een attribuut van het Meldingsobject.</p></div>
+                    <div><p></p></div>
+                    
+                    
+                    
+                    <div><p>Voor dit datatype zijn de volgende attributen gedefinieerd: eigenschap, huidigeWaarde, voorgesteldeWaarde.</p></div>
+                    </div>
+                    <div class="u-table-overflow">
+                        <table class="data-table">
+                          <thead>
+                          <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                            <th class="data-table__header-title--sortable">Verwacht Type</th>
+                            <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                            <th class="data-table__header-title--sortable">Beschrijving</th>
+                            <th class="data-table__header-title--sortable">Gebruik</th>
+                            <th class="data-table__header-title--sortable">Codelijst</th>
+                          </tr>
+                          </thead>
+
+                          <tbody class="supertype">
+                          
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#eigenschap">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#eigenschap" data-placement="right">
+                                
+                                eigenschap
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/melding#Eigenschap" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#Eigenschap" data-placement="right">Eigenschap</a></td>
+                            <td>1 .. 1</td>
+                            <td property="rdfs:comment">Verwijst naar de Eigenschap die deel uitmaakt van een bepaalde Dataset.</td>
+                            <td property="vann:usageNote">Als waarde wordt de identificator opgenomen van de Eigenschap  zoals gedefinieerd bij de configuratie van de Dataset bij de Generieke Terugmeldfaciliteit.</td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#huidigeWaarde">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#huidigeWaarde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#huidigeWaarde" data-placement="right">
+                                
+                                huidigeWaarde
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">De huidige waarde van een Eigenschap.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/melding#hvoorgesteldeWaarde">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/melding#hvoorgesteldeWaarde" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/melding#hvoorgesteldeWaarde" data-placement="right">
+                                
+                                hvoorgesteldeWaarde
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
+                            <td>0 .. 1</td>
+                            <td property="rdfs:comment">De voorgestelde waarde van een Eigenschap.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
+                          </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="example">
+                      <span>Voorbeeld JSON-LD:</span>
+                      <div style="background:#efefef">
+                        <pre class="prettyprint">
+"@id": "https://meldingen.vlaanderen.be/api/v1/meldingen/21B7F915-4107-4209-9D36-F30BB1920754",
+"@type": "Melding",
+"heeftDoelwit": [
+{
+  "@id": "http://data.vlaanderen.be/id/dataset/led/ff4a0f6e-f736-48e3-a00a-5ec61943eabd",
+  "attribuut" : [ 
+    {
+      "@type": "MeldingsobjectAttribuut",
+      "eigenschap" : "https://meldingen.vlaanderen.be/api/v1/dataset/led/UITREIKINGSDATUM",
+      "huidigeWaarde": "2013-07-01",
+      "voorgesteldeWaarde": "2014-01-01"
+    }
+  ]
+}
+</pre>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+      </div>
       
+
       </div>
       
     </div>
@@ -1619,6 +1804,7 @@ attribuut: [
       <div class="region region--no-space-top">
           <div class="layout layout--normal">
             <h3 class="h2" id="Context"><span class="secno">4.</span> JSON-LD Context</h3>
+            <p>De JSON-LD context file is te vinden op: <a href="http://data.vlaanderen.be/context/melding.jsonld" target="_blank">http://data.vlaanderen.be/context/melding.jsonld</a></p>
             <div class="grid">
               <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
@@ -1627,20 +1813,35 @@ attribuut: [
 {
   "@context":
   {
-    "Participatie":"http://data.europa.eu/m8g/Participation",
-    "Eigenschap":"http://data.vlaanderen.be/ns/melding#Eigenschap",
     "Agent":"http://purl.org/dc/terms/Agent",
+    "CodelijstWaarde": "http://data.vlaanderen.be/ns/melding#CodelijstWaarde",
+    "Eigenschap":"http://data.vlaanderen.be/ns/melding#Eigenschap",
     "Dataset":"http://purl.org/dc/dcmitype/Dataset",
-    "TijdToestand":"http://www.w3.org/ns/oa#TimeState",
-    "Meldingsobject":"http://data.vlaanderen.be/ns/melding#Meldingsobject",
-    "Status":"http://data.vlaanderen.be/ns/melding#Status",
     "Melding":"http://data.vlaanderen.be/ns/melding#Melding",
+    "Meldingsobject":"http://data.vlaanderen.be/ns/melding#Meldingsobject",
+    "MeldingsobjectAttribuut":"http://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut",
+    "Participatie":"http://data.europa.eu/m8g/Participation",
+    "Status":"http://data.vlaanderen.be/ns/melding#Status",
+    "TijdToestand":"http://www.w3.org/ns/oa#TimeState",
 
 
     "attribuut":{
       "@id":"http://data.vlaanderen.be/ns/melding#attribuut",
       "@type":"http://data.vlaanderen.be/ns/melding#Eigenschap",
       "@container":"@set"
+    },
+    "bereik":{
+      "@id":"http://data.vlaanderen.be/ns/melding#bereik",
+      "@type":"http://www.w3.org/2000/01/rdf-schema#Datatype",
+    },
+    "codelijst":{
+      "@id":"http://data.vlaanderen.be/ns/melding#codelijst",
+      "@type":"http://data.vlaanderen.be/ns/melding#CodelijstWaarde",
+      "@container":"@set"
+    },
+    "eigenschap":{
+      "@id":"http://data.vlaanderen.be/ns/melding#eigenschap",
+      "@type":"http://data.vlaanderen.be/ns/melding#Eigenschap",
     },
     "gerelateerdeBody":{
       "@id":"http://data.vlaanderen.be/ns/melding#gerelateerdeBody",
@@ -1682,7 +1883,6 @@ attribuut: [
       "@id":"http://data.europa.eu/m8g/playsRole",
       "@type":"http://data.europa.eu/m8g/Participation"
     },
-
 
     "extraInformatie":{
       "@id":"https://www.w3.org/ns/activitystreams#attachment",
@@ -1743,7 +1943,7 @@ attribuut: [
     },
     "statuswijzigingDoor":{
       "@id":"http://data.vlaanderen.be/ns/melding#statuswijzigingDoor",
-      "@type":"http://fixme.com#Agent"
+      "@type":"http://purl.org/dc/terms/Agent"
     },
     "meldingsapplicatie":{
       "@id":"http://data.vlaanderen.be/ns/melding#meldingsapplicatie",
@@ -1751,7 +1951,7 @@ attribuut: [
     },
     "meldingsorganisatie":{
       "@id":"http://data.vlaanderen.be/ns/melding#meldingsorganisatie",
-      "@type":"http://fixme.com#Organisatie"
+      "@type":"http://www.w3.org/ns/org#Organization"
     },
     "meldingstype":{
       "@id":"http://www.w3.org/ns/oa#motivatedBy",
@@ -1769,6 +1969,22 @@ attribuut: [
     "url":{
       "@id":"http://data.vlaanderen.be/ns/melding#url",
       "@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "regex":{
+      "@id":"http://data.vlaanderen.be/ns/melding#regex",
+      "@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "huidigeWaarde":{
+      "@id":"http://data.vlaanderen.be/ns/melding#huidigeWaarde",
+      "@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "voorgesteldeWaarde":{
+      "@id":"http://data.vlaanderen.be/ns/melding#voorgesteldeWaarde",
+      "@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "werdToegewezenAan": {
+      "@id": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "@type": "@id"
     }
   }
 }</pre>
