@@ -98,7 +98,7 @@
 
 		"datum":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#datum",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"plaats":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#plaats",
@@ -130,7 +130,7 @@
 		},
 		"datumVanAfstamming":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#datumVanAfstamming",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"registratie":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#registratie",
@@ -138,21 +138,21 @@
 		},
 		"achternaam":{
 			"@id":"http://xmlns.com/foaf/0.1/familyName",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
 			"@container":"@set"
 		},
 		"alternatieveNaam":{
 			"@id":"http://xmlns.com/foaf/0.1/name",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
 			"@container":"@set"
 		},
 		"geboortenaam":{
 			"@id":"http://www.w3.org/ns/person#birthName",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"gebruikteVoornaam":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#gebruikteVoornaam",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"geslacht":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#geslacht",
@@ -164,15 +164,15 @@
 		},
 		"patroniem":{
 			"@id":"http://www.w3.org/ns/person#patronymicName",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"volledigeNaam":{
 			"@id":"http://data.vlaanderen.be/ns/persoon#volledigeNaam",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"voornaam":{
 			"@id":"http://xmlns.com/foaf/0.1/givenName",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
 			"@container":"@set"
 		}
 	}

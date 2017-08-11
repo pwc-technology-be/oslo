@@ -1,0 +1,464 @@
+@prefix corevoc:  <http://data.europa.eu/m8g/> .
+@prefix org:     <https://www.w3.org/ns/org#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix as:      <https://www.w3.org/ns/activitystreams#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcmi:    <http://purl.org/dc/dcmitype/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+
+<http://data.vlaanderen.be/ns/patrimonium>
+      a       owl:Ontology ;
+      dcterms:issued "2017-07-14"^^xsd:date ;
+      dcterms:title "Patrimonium"@nl ;
+      vann:preferredNamespaceUri
+              "http://data.vlaanderen.be/ns/patrimonium" .
+
+<http://data.vlaanderen.be/ns/gebouw#Gebouweenheid>
+      rdfs:label "Gebouweenheid"@nl .
+
+<http://data.vlaanderen.be/ns/gebouw#functie>
+      rdfs:comment "Functie waarvoor de gebouweenheid in de realiteit (zoals vastgesteld op het terrein) gebruikt wordt."@nl ;
+      rdfs:label "functie"@nl .
+
+<http://data.vlaanderen.be/ns/gebouw#gebouweenheidStatus>
+      rdfs:comment "Fase van de levensloop waarin de gebouweenheid zich bevindt"@nl ;
+      rdfs:label "gebouweenheid status"@nl .
+
+<http://data.vlaanderen.be/ns/gebouw#isFunctioneleEenheidBinnen>
+      rdfs:comment "Verwijst naar het Gebouw waar de Gebouweenheid een functionele eenheid van uitmaakt."@nl ;
+      rdfs:label "gebouw"@nl .
+
+<http://data.vlaanderen.be/ns/gebouw#isOnderliggendPerceel>
+      rdfs:comment "Verwijst naar een Perceel waar het Gebouw op gelegen is."@nl ;
+      rdfs:label "is onderliggend perceel"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#AandeelInfo>
+      a       owl:Class ;
+      rdfs:comment "De uitdrukking van deel van een gemeenschappelijk bezit dat iemand toekom"@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Aandeel Info"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#Adresvoorstelling.busnummer>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain locn:Address ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "busnummer"@nl ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf locn:locatorDesignator .
+
+<http://data.vlaanderen.be/ns/patrimonium#Adresvoorstelling.huisnummer>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain locn:Address ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "huisnummer"@nl ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf locn:locatorDesignator .
+
+<http://data.vlaanderen.be/ns/patrimonium#Eigenaarsrecht>
+      a       owl:Class ;
+      rdfs:comment "Deze klasse beschrijft de rechten die verbonden zijn aan een bepaalde Eigendomstoestand voor een specifiek Patrimoniaal Perceel en die toebehoren aan een Agent."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Eigenaarrecht"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#Eigendomstoestand>
+      a       owl:Class ;
+      rdfs:comment "De Eigendomstoestand geeft voor een Patrimoniaal Perceel een overzicht van alle eigenaarrechten."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Eigendomstoestand"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#Gebouw>
+      a       owl:Class ;
+      rdfs:comment "Een gesloten en/of overdekt, bovengronds of ondergronds bouwwerk, dat dient of bestemd is, ofwel om mensen, dieren en voorwerpen onder te brengen, ofwel om economische goederen te vervaardigen of diensten te verstrekken. Een gebouw verwijst naar gelijk we"@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Gebouw"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen>
+      a       owl:Class ;
+      rdfs:comment "Het kadastraal inkomen vormt de basis voor de inning van de onroerende voorheffing en voor het bepalen van het onroerend inkomen waarop Personen belast worden in de personenbelasting."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Kadastraal Inkomen"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#OnbebouwdeGrond>
+      a       owl:Class ;
+      rdfs:comment "Een onbebouwde grond."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Onbebouwde Grond"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#PatKey>
+      a       owl:Class ;
+      rdfs:comment "Geeft de structuur weer de identificatie van een Patrimoniaal Perceel."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "PatKey"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel>
+      a       owl:Class ;
+      rdfs:comment "De basis eenheid van onroerend goed zoals geregistreerd in de kadastrale legger. Gedefinieerd door unieke eigendom en homogene eigendomsrechten, kan bestaan uit één of meerdere aanpalende of geografisch gescheiden kadastrale planpercelen."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Patrimoniaal Perceel"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#ZakelijkRecht>
+      a       owl:Class ;
+      rdfs:comment "Het recht dat rust op een zaak of een ander goed."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "Zakelijk Recht"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium#aandeel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Het deel van een gemeenschappelijk bezit dat iemand toekomt"@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#ZakelijkRecht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "aandeel"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#AandeelInfo> .
+
+<http://data.vlaanderen.be/ns/patrimonium#aantalMedeEigenaars>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Het aantal mede-eigenaars opgenomen in de Eigendomstoestand."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigendomstoestand> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "aantal mede-eigenaars"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#aardKI>
+      a       owl:ObjectProperty ;
+      rdfs:comment "De aard van het Kadastraal Inkomen."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "aard KI"@nl ;
+      rdfs:range skos:Concept .
+
+<http://data.vlaanderen.be/ns/patrimonium#administratieveGemeente>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "De gemeente die de administratieve verantwoordelijk heeft van het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "administratieve gemeente"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#bedrag>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Het bedrag van het Kadastraal Inkomen."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "bedrag"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#bouwjaar>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Jaar waarin het gebouw werd voltooid."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Gebouw> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "bouwjaar"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#datumEindeVrijstelling>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "De datum waarop de vrijstelling van het Kadastraal Inkomen eindigt."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "datum einde vrijstelling"@nl ;
+      rdfs:range xsd:date .
+
+<http://data.vlaanderen.be/ns/patrimonium#eigenaarsrecht>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar het Eigenaarsrecht dat deel uitmaakt van de Eigendomstoestand."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigendomstoestand> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "eigenaarsrecht"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#Eigenaarsrecht> .
+
+<http://data.vlaanderen.be/ns/patrimonium#fiscaalStatuut>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Het fiscaal statuut verbonden aan het Kadastraal Inkomen, dit bepaalt of het Kadastraal Inkomen al dan niet belastbaar is."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "fiscaal statuut"@nl ;
+      rdfs:range skos:Concept .
+
+<http://data.vlaanderen.be/ns/patrimonium#gebouweenheid>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar de Gebouweenheid die deel uitmaakt van het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "is onderliggend patrimoniaal perceel bij"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/gebouw#Gebouweenheid> .
+
+<http://data.vlaanderen.be/ns/patrimonium#gemeentenaam>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain locn:Address ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "gemeentenaam"@nl ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf locn:postName .
+
+<http://data.vlaanderen.be/ns/patrimonium#grondnummer>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Het grondnummer van het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatKey> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "grondnummer"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#identificatie>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Identificatie van het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "identificatie"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#PatKey> .
+
+<http://data.vlaanderen.be/ns/patrimonium#isOnderliggendPatrimoniaalPerceel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar een Patrimoniaal Perceel waar de Gebouweenheid deel van uitmaakt."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/gebouw#Gebouweenheid> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "is onderliggend patrimoniaal perceel"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> .
+
+<http://data.vlaanderen.be/ns/patrimonium#isOnderliggendPerceelBij>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar een Gebouw dat op het Perceel gelegen is."@nl ;
+      rdfs:domain <http://inspire.ec.europa.eu/ont/cp#CadastralParcel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "is onderliggend perceel bij"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#Gebouw> .
+
+<http://data.vlaanderen.be/ns/patrimonium#kadastraalInkomen>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar het kadastraal inkomen verbonden aan het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "kadastraal inkomen"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#KadastraalInkomen> .
+
+<http://data.vlaanderen.be/ns/patrimonium#kadastraleAfdeling>
+      a       owl:ObjectProperty ;
+      rdfs:comment "De kadastrale afdeling van het Patromoniaal Perceel. "@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatKey> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "kadastrale afdeling"@nl ;
+      rdfs:range skos:Concept .
+
+<http://data.vlaanderen.be/ns/patrimonium#land>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain locn:Address ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "land"@nl ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf locn:adminUnitL1 .
+
+<http://data.vlaanderen.be/ns/patrimonium#letterexponent>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatKey> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "letterexponent"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#noemer>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "De noemer van het aandeel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#AandeelInfo> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "noemer"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#onbebouwd>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar een onbebouwde grond vervat in het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "onbebouwd"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#OnbebouwdeGrond> .
+
+<http://data.vlaanderen.be/ns/patrimonium#partij>
+      a       owl:ObjectProperty ;
+      rdfs:comment "De partij (Agent) waaraan het Eigenaarrecht verbonden is. "@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigenaarsrecht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "partij"@nl ;
+      rdfs:range dcterms:Agent .
+
+<http://data.vlaanderen.be/ns/patrimonium#partitie>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "TODO"@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatKey> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "partitie"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#patrimoniaalPerceel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Het Patrimoniaal Perceel waar de Eigendomstoestand betrekking op heeft."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigendomstoestand> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "patrimoniaal perceel"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> .
+
+<http://data.vlaanderen.be/ns/patrimonium#perceel>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar het kadastraal planperceel waar het Patrimoniaal Perceel een eigendomseenheid van vormt."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatrimoniaalPerceel> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "perceel"@nl ;
+      rdfs:range <http://inspire.ec.europa.eu/ont/cp#CadastralParcel> .
+
+<http://data.vlaanderen.be/ns/patrimonium#rechtType>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Het type Zakelijk Recht."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#ZakelijkRecht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "recht type"@nl ;
+      rdfs:range skos:Concept .
+
+<http://data.vlaanderen.be/ns/patrimonium#sectie>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "De sectie van het Patrimoniaal Perceel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#PatKey> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "sectie"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#teller>
+      a       owl:DatatypeProperty ;
+      rdfs:comment "De teller van het aandeel."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#AandeelInfo> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "teller"@nl ;
+      rdfs:range xsd:string .
+
+<http://data.vlaanderen.be/ns/patrimonium#titularisType>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Het type van de titularis van het Eigenaarrecht."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigenaarsrecht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "titularis type"@nl ;
+      rdfs:range skos:Concept .
+
+<http://data.vlaanderen.be/ns/patrimonium#zakelijkRecht>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Verwijst naar het Zakelijk Recht verbonden aan het Eigenaarsrecht."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/patrimonium#Eigenaarsrecht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "zakelijk recht"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/patrimonium#ZakelijkRecht> .
+
+<http://data.vlaanderen.be/ns/patrimonium/FunctieCodelijst/GemeenschappelijkDeel>
+      a       skos:Concept ;
+      rdfs:comment "De gebouweenheid verwijst naar het geheel van gemeenschappelijke ruimten, en bij uitbreiding, gedeelde bouwkundige structuren van het gebouw."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "gemeenschappelijk deel"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium/FunctieCodelijst/NietGekend>
+      a       skos:Concept ;
+      rdfs:comment "De functie van de gebouweenheid is niet gekend."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "niet gekend"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium/GebouweenheidStatusCodelijst/Gehistoreerd>
+      a       skos:Concept ;
+      rdfs:comment "De gebouweenheid hield (al dan niet samen met het gebouw) op te bestaan, werd samengevoegd of gesplitst."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "gehistoreerd"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium/GebouweenheidStatusCodelijst/Gepland>
+      a       skos:Concept ;
+      rdfs:comment "Er werd een vergunning aangevraagd of verleend voor de gebouweenheid."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "gepland"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium/GebouweenheidStatusCodelijst/Gerealiseerd>
+      a       skos:Concept ;
+      rdfs:comment "De gebouweenheid werd gerealiseerd (werken beëindigd) en/of is waarneembaar op het terrein."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "gerealiseerd"@nl .
+
+<http://data.vlaanderen.be/ns/patrimonium/GebouweenheidStatusCodelijst/NietGerealiseerd>
+      a       skos:Concept ;
+      rdfs:comment "De vergunning voor de gebouweenheid werd niet verleend, is vervallen of werd ingetrokken door de bouwheer."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/patrimonium> ;
+      rdfs:label "niet gerealiseerd"@nl .
+
+<http://inspire.ec.europa.eu/ont/cp#CadastralParcel>
+      rdfs:comment "Deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel."@nl ;
+      rdfs:label "Perceel"@nl .
+
+<http://inspire.ec.europa.eu/ont/cp#CadastralParcel.basicPropertyUnit>
+      rdfs:label "eigendomseenheid"@nl .
+
+dcterms:Agent
+      rdfs:label "Agent"@nl .
+
+<http://schema.org/expires>
+      rdfs:label "vervaldatum"@nl .
+
+<http://www.opengis.net/ont/geosparql#asGML>
+      rdfs:label "als GML"@nl .
+
+<http://www.opengis.net/ont/geosparql#asWKT>
+      rdfs:label "als WKT"@nl .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point>
+      rdfs:label "Punt"@nl .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+      rdfs:label "latitude"@nl .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long>
+      rdfs:label "longitude"@nl .
+
+skos:Concept
+      rdfs:label "Recht Type"@nl , "Gebouweenheid Status Codelijst"@nl , "Fiscaal Statuut"@nl , "Aard KI"@nl , "Functie Codelijst"@nl , "Kadastrale Afdeling"@nl , "Titularis Type"@nl .
+
+locn:Address
+      rdfs:label "Adres Voorstelling"@nl .
+
+locn:Geometry
+      rdfs:label "Geometrie"@nl .
+
+locn:address
+      rdfs:comment "Verwijst naar de adresnotatie voor dit object."@nl ;
+      rdfs:label "adres"@nl .
+
+locn:addressArea
+      rdfs:label "adresgebied"@nl .
+
+locn:adminUnitL1
+      rdfs:label "administratieve eenheid niveau 1"@nl .
+
+locn:adminUnitL2
+      rdfs:label "administratieve eenheid niveau 2"@nl .
+
+locn:fullAddress
+      rdfs:label "volledig adres"@nl .
+
+locn:geometry
+      rdfs:label "geometrie"@nl .
+
+locn:locatorDesignator
+      rdfs:label "locatieaanduiding"@nl .
+
+locn:locatorName
+      rdfs:label "Locatienaam"@nl , "locatienaam"@nl .
+
+locn:poBox
+      rdfs:label "postbus"@nl .
+
+locn:postCode
+      rdfs:label "postcode"@nl .
+
+locn:postName
+      rdfs:label "postnaam"@nl .
+
+locn:thoroughfare
+      rdfs:label "straatnaam"@nl .
