@@ -156,19 +156,19 @@
 		},
 		"url":{
 			"@id":"http://data.vlaanderen.be/ns/melding#url",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"regex":{
 			"@id":"http://data.vlaanderen.be/ns/melding#regex",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"huidigeWaarde":{
 			"@id":"http://data.vlaanderen.be/ns/melding#huidigeWaarde",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"voorgesteldeWaarde":{
 			"@id":"http://data.vlaanderen.be/ns/melding#voorgesteldeWaarde",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"werdToegewezenAan": {
 			"@id": "http://www.w3.org/ns/prov#wasAttributedTo",

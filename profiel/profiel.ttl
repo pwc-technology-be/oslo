@@ -44,7 +44,7 @@
       rdfs:domain <http://www.w3.org/ns/person#Person> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/profiel> ;
       rdfs:label "gebruikte voornaam"@nl ;
-      rdfs:range rdfs:Literal ;
+      rdfs:range xsd:string ;
       rdfs:subPropertyOf foaf:givenName .
 
 <http://data.vlaanderen.be/ns/profiel#gemeentenaam>
@@ -53,7 +53,7 @@
       rdfs:domain locn:Address ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/profiel> ;
       rdfs:label "gemeentenaam"@nl ;
-      rdfs:range rdfs:Literal ;
+      rdfs:range xsd:string ;
       rdfs:subPropertyOf locn:postName .
 
 <http://data.vlaanderen.be/ns/profiel#land>
@@ -62,7 +62,7 @@
       rdfs:domain locn:Address ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/profiel> ;
       rdfs:label "land"@nl ;
-      rdfs:range rdfs:Literal ;
+      rdfs:range xsd:string ;
       rdfs:subPropertyOf locn:adminUnitL1 .
 
 <http://data.vlaanderen.be/ns/profiel#registratie>
@@ -115,7 +115,7 @@ vcard:honorific-prefix
 rdf:value
       rdfs:label "string"@nl .
 
-rdfs:Literal
+xsd:string
       rdfs:label "Getypeerde String"@nl .
 
 vcard:language

@@ -107,8 +107,7 @@
       rdfs:comment "Associeert de Eigenschap met mogelijk codelijst waarden die voor de Eigenschap gebruikt kunnen worden."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/melding#Eigenschap> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "codelijst"@nl ;
-      rdfs:range rdfs:Literal .
+      rdfs:label "codelijst"@nl .
 
 <http://data.vlaanderen.be/ns/melding#eigenschap>
       a       owl:ObjectProperty ;
@@ -138,8 +137,7 @@
       rdfs:comment "De huidige waarde van een Eigenschap."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "huidige waarde"@nl ;
-      rdfs:range rdfs:Literal .
+      rdfs:label "huidige waarde"@nl .
 
 <http://data.vlaanderen.be/ns/melding#meldingsapplicatie>
       a       owl:ObjectProperty ;
@@ -164,8 +162,7 @@
       rdfs:comment "Een regular expression om na te gaan of een waarde voldoet aan een bepaald patroon."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/melding#Eigenschap> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "regex"@nl ;
-      rdfs:range rdfs:Literal .
+      rdfs:label "regex"@nl .
 
 <http://data.vlaanderen.be/ns/melding#statusType>
       a       owl:ObjectProperty ;
@@ -205,16 +202,14 @@
       rdfs:comment "De voorgestelde waarde van een Eigenschap."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "voorgestelde waarde"@nl ;
-      rdfs:range rdfs:Literal .
+      rdfs:label "voorgestelde waarde"@nl .
 
 <http://data.vlaanderen.be/ns/melding#url>
       a       owl:DatatypeProperty ;
       rdfs:comment "Een doorverwijzing naar een webpagina over deze Melding."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/melding#Melding> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "url"@nl ;
-      rdfs:range rdfs:Literal .
+      rdfs:label "url"@nl .
 
 <http://data.vlaanderen.be/ns/melding/Rol/Behandelaar>
       a       <http://data.vlaanderen.be/ns/melding#Rol> ;
