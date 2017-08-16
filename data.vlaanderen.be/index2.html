@@ -2,7 +2,7 @@
 
 <html lang="nl">
 <head>
-	<title>ns.html</title>
+	<title>index.html</title>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -36,7 +36,7 @@
 
 				<div class="layout layout--wide">
 					<div class="content-header__content">
-						<h1 class="content-header__title"><span class="content-header__title__content">Vocabularia en applicatieprofielen</span>
+						<h1 class="content-header__title"><span class="content-header__title__content">Data.Vlaanderen.be</span>
 						</h1>
 					</div>
 				</div>
@@ -49,8 +49,12 @@
 				<div class="layout layout--wide" id="introductie">
 					<div class="grid">
 						<div class="col--8-12 col--12-12--s">
-							Op 31 maart 2017 werden een aantal vocabularia en applicatieprofielen als kandidaat-standaard gepubliceerd door de werkgroep OSLO² van Informatie Vlaanderen. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze kandidaat-standaarden. Na deze evaluatieperiode, waarbij aan de hand van referentie implementaties de robuustheid en de volledigheid van de vocabularia en de applicatieprofielen worden getest, worden de OSLO² specificaties gepromoot tot volwaardige standaarden. </p><br>
-							<p>Feedback kan je geven via <a href="mailto:oslo@kb.vlaanderen.be">email</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>
+							<div class="typography introduction">
+								<a href="http://www.vlaanderen.be/informatievlaanderen">Agentschap Informatie Vlaanderen</a> ontsluit data volgens de principes beschreven in de <a href="https://overheid.vlaanderen.be/OSLO-URI-standaard">Vlaamse URI standaard</a>. Dit domein past binnen de doelstelling van de Vlaamse overheid om in te zetten op een éénduidige standaard voor de uitwisseling van informatie. Het project <a href="https://overheid.vlaanderen.be/producten-diensten/OSLO2">Open Standaarden voor Linkende Overheden</a> (OSLO&#178;) is de overkoepelende drijvende kracht achter de dienstverlening van Data.Vlaanderen.be.
+
+								<p>
+								</p>
+							</div>
 						</div>
 
 
@@ -60,12 +64,12 @@
 									<div class="side-navigation__group">
 										<ul>
 											<li class="side-navigation__item">
-												<a href="#vocabularia">Vocabularia</a>
+												<a href="#CRAB-LOD">BETA release CRAB-LOD</a>
 											</li>
 
 
 											<li class="side-navigation__item">
-												<a href="#applicatieprofielen">Applicatieprofielen</a>
+												<a href="#Specificaties">OSLO&#178; specificaties</a>
 											</li>
 
 
@@ -74,20 +78,25 @@
 											</li>
 										</ul>
 									</div>
+								</div>
 
 
-									<div class="side-navigation__group side-navigation__group--has-title">
-										<div class="side-navigation__title">
-											Lees ook
-										</div>
-
-
-										<ul>
-											<li class="side-navigation__item">
-												<a class="link--icon--caret link--icon--block" href="https://docs.google.com/document/d/1tbK17wmgkIlNOXjYRE3Arf3PMI--8TvidBprKOcgcvQ/edit?usp=sharing">Handleiding</a>
-											</li>
-										</ul>
+								<div class="side-navigation__group side-navigation__group--has-title">
+									<div class="side-navigation__title">
+										Lees ook
 									</div>
+
+
+									<ul>
+										<li class="side-navigation__item">
+											<a class="link--icon--caret link--icon--block" href="https://docs.google.com/document/d/1tbK17wmgkIlNOXjYRE3Arf3PMI--8TvidBprKOcgcvQ/edit?usp=sharing">Handleiding</a>
+										</li>
+
+
+										<li class="side-navigation__item">
+											<a class="link--icon--caret link--icon--block" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data">CRAB als gelinkte Open Data</a>
+										</li>
+									</ul>
 								</div>
 							</nav>
 						</div>
@@ -96,112 +105,115 @@
 			</section>
 
 
-			<section>
-				<div class="layout layout--wide" id="introductie">
-					<h2 class="h2 u-named-anchor" id="vocabularia">De volgende vocabularia zijn beschikbaar</h2>
-
-
+			<section class="region region--alt" id="altRegion">
+				<div class="layout layout--wide">
 					<div id="doormats">
 						<ul class="grid grid--is-stacked js-equal-height-container">
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
 								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
 								<div class="doormat__title">
-									Generiek
+									CRAB als gelinkte Open Data
 								</div>
-								<span class="doormat__text">Een algemeen ondersteunend vocabularium.</span></a>
+								<span class="doormat__text">Een eerste dataset die ontsloten wordt op dit domein zijn de adressen uit het adressenregister (CRAB). Ontdek hier alle informatie omtrent dit project.</span></a>
+							</li>
+
+
+							<li class="col--4-12 col--1-2--s col--12-12--xs">
+								<a class="doormat js-equal-height u-mobile-no-equal-height" href="http://data.vlaanderen.be/sparql" id="doormat">
+								<div class="doormat__title">
+									SPARQL-endpoint for CRAB-LOD
+								</div>
+								<span class="doormat__text">Het SPARQL-endpoint biedt de mogelijkheid om complexe vragen in SPARQL te stellen over de beschikbare data.</span></a>
 							</li>
 
 
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
 								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
 								<div class="doormat__title">
-									Adres
+									RDF-dump CRAB-LOD
 								</div>
-								<span class="doormat__text">Het Adres vocabularium legt termen en definities vast voor het beschrijven van een Belgisch adres.</span></a>
+								<span class="doormat__text">De publicatie van het linked open dataproduct, minimaal met dereferenceable URI’s aangeboden.</span></a>
 							</li>
 
 
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
+								<a class="doormat js-equal-height u-mobile-no-equal-height" href="/ns.html#vocabularia" id="doormat">
 								<div class="doormat__title">
-									Organisatie
+									Vocabularia
 								</div>
-								<span class="doormat__text">Het Organisatie vocabularium legt termen en definities vast voor het beschrijven van organisaties en bouwt verder op de vocabularia van W3C en ISA.</span></a>
+								<span class="doormat__text">Vocabularia beschrijven semantiek, de concepten die beschreven worden zijn bruikbaar in verschillende toepassingsdomeinen. De OSLO&#178; vocabularia zijn gepubliceerd als kandidaat-standaarden.</span></a>
 							</li>
 
 
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
+								<a class="doormat js-equal-height u-mobile-no-equal-height" href="/ns.html#applicatieprofielen" id="doormat">
 								<div class="doormat__title">
-									Persoon
+									Applicatieprofielen
 								</div>
-								<span class="doormat__text">Het Persoon vocabularium legt termen en definities vast voor het beschrijven van personen en hun relaties. Het bouwt verder op vocabularia van W3C en ISA.</span></a>
+								<span class="doormat__text">Ontdek hier de beschikbare applicatieprofielen gepubliceerd als kandidaat-standaarden. Applicatieprofielen zijn specificaties voor gegevensuitwisseling in bepaalde use cases.</span></a>
 							</li>
 
 
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
+								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://docs.google.com/document/d/1tbK17wmgkIlNOXjYRE3Arf3PMI--8TvidBprKOcgcvQ/edit?usp=sharing" id="doormat">
 								<div class="doormat__title">
-									Dienst
+									Handleiding
 								</div>
-								<span class="doormat__text">Het Dienst vocabularium legt termen en definities vast voor het beschrijven van publieke dienstverlening. Het is gebaseerd op het Core Public Service Vocabulary Application Profile.</span></a>
+								<span class="doormat__text">Ontdek hier hoe je interoperabele toepassingen en web services ontwikkeld via Open Standaarden voor Linkende Organisaties (OSLO&#178;).</span></a>
 							</li>
 						</ul>
 					</div>
-					<br>
-					<br>
+				</div>
+			</section>
 
 
-					<h2 class="h2 u-named-anchor" id="applicatieprofielen">De volgende applicatieprofielen zijn beschikbaar</h2>
+			<section class="info-block info-block--news" id="CRAB-LOD">
+				<div class="layout layout--wide">
+					<header class="info-block__header">
+						<h1 class="info-block__title">BETA release CRAB-LOD</h1>
+					</header>
 
 
-					<div id="doormats">
-						<ul class="grid grid--is-stacked js-equal-height-container">
-							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
-								<div class="doormat__title">
-									Applicatieprofiel Generiek Basis
-								</div>
-								<span class="doormat__text">Dit applicatieprofiel definieert een specificatie voor de uitwisseling van algemene concepten als contactinformatie, geometrieën en herkomstinformatie.</span></a>
-							</li>
-
-
-							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
-								<div class="doormat__title">
-									Applicatieprofiel Adresregister
-								</div>
-								<span class="doormat__text">Dit applicatieprofiel definieert een specificatie voor de uitwisseling van adresgegevens in de context van een adresregister.</span></a>
-							</li>
-
-
-							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
-								<div class="doormat__title">
-									Applicatieprofiel Organisatie Basis
-								</div>
-								<span class="doormat__text">Dit applicatieprofiel definieert een specificatie voor de uitwisseling van adresgegevens in de context van een organisatieregister.</span></a>
-							</li>
-
-
-							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
-								<div class="doormat__title">
-									Applicatieprofiel Persoon Basis
-								</div>
-								<span class="doormat__text">Dit applicatieprofiel definieert een specificatie voor de uitwisseling van persoonsgegevens in de context vaan een personenregister of bij het uitvoeren van publieke dienstverlening.</span></a>
-							</li>
-
-
-							<li class="col--4-12 col--1-2--s col--12-12--xs">
-								<a class="doormat js-equal-height u-mobile-no-equal-height" href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" id="doormat">
-								<div class="doormat__title">
-									Applicatieprofiel Dienstencataloog
-								</div>
-								<span class="doormat__text">Dit applicatieprofiel definieert een specificatie voor de uitwisseling van gegevens met betrekking tot publieke dienstverlening in de context van een dienstencataloog.</span></a>
-							</li>
-						</ul>
+					<div class="info-block__content">
+						Data.Vlaanderen.be is in publieke BETA-versie beschikbaar. De beschikbare URI's van de CRAB-LOD dataset komen van een snapshot welke gedurende de BETA-periode op beperkte wijze gesynchroniseerd wordt gehouden met de gegevens uit het basisregister.
 					</div>
+					<br>
+					Data.Vlaanderen.be voorziet de volgende toegangsmethoden tot de data:
+
+					<ul class="bullet-list bullet-list--tag">
+						<li class="bullet-list__item">
+							<strong>Content negotatie</strong> De URI <a href="http://data.vlaanderen.be/id/adres/2185403">http://data.vlaanderen.be/id/adres/2185403</a> is de persistente identifier voor het adres Koningin Maria Hendrikaplein 70, Gent. Als deze URI opgevraagd wordt via een webbrowser dan verkrijgt men een menselijk leesbare webpagina waarop informatie over dit adres wordt weergegeven. Dezelfde informatie is ook aangeboden in machine-leesbare vorm zoals RDF. Reeds ondersteunde HTTP accept headers zijn text/html, application/rdf+xml, text/ntriples en text/turtle. Voor documenten en vocabularia worden de file-extenties .rdf, .nt en .ttl ook ondersteund als alternatief voor het instellen van de HTTP accept header.
+						</li>
+
+
+						<li class="bullet-list__item">
+							<strong>SPARQL endpoint</strong> Het <a href="http://data.vlaanderen.be/sparql">SPARQL-endpoint</a> biedt de mogelijkheid om complexe vragen in <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> te stellen over de beschikbare data.
+						</li>
+
+
+						<li class="bullet-list__item">
+							<strong>RDF-dump</strong> De publicatie van het linked open dataproduct, minimaal met dereferenceable URI’s aangeboden, is te vinden als RDF-dump op deze locatie <a href="http://data.vlaanderen.be/dumps">data.vlaanderen.be/dumps</a>.
+						</li>
+
+
+						<li class="bullet-list__item">
+							<strong>Vocabularia</strong> De beschrijving van de gebruikte vocabularia is <a href="ns.html">hier</a> te vinden.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<section class="region region--alt" id="Specificaties">
+				<div class="layout layout--wide">
+					<h1 class="h1 u-named-anchor" id="Specificaties">OSLO&#178; Specificaties (kandidaat-standaarden)</h1>
+
+
+					<p>Op 31 maart 2017 werden een aantal vocabularia en applicatieprofielen als kandidaat-standaard gepubliceerd door de werkgroep OSLO&#178; van Informatie Vlaanderen. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze kandidaat-standaarden. Na deze evaluatieperiode, waarbij aan de hand van referentie implementaties de robuustheid en de volledigheid van de vocabularia en de applicatieprofielen worden getest, worden de OSLO&#178; specificaties gepromoot tot volwaardige standaarden.</p><br>
+					<p> Feedback kan je geven via <a href="mailto:oslo@kb.vlaanderen.be">email</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>
+					<br>
+
+					<a href="" class="link--icon--caret link--block">Ontdek hier de beschikbare vocabularia en applicatieprofielen.</a>
 				</div>
 			</section>
 
@@ -220,6 +232,11 @@
 									<ul class="grid">
 										<li class="col--6-12 col--12-12--s">
 											<ul class="link-list">
+												<li>
+													<a class="toggle--arrow-down link--icon--caret link--block" data-drawer-content-id="331988" data-drawer-id="related-questions" href="#">Zijn de identifactoren van informatie-objecten die beschikbaar zijn via dit domein in de vorm van een URI persistent en semantisch éénduidig?</a>
+												</li>
+
+
 												<li>
 													<a class="toggle--arrow-down link--icon--caret link--block" data-drawer-content-id="270933" data-drawer-id="related-questions" href="#">Wat is een vocabularium en applicatieprofiel en hoe verhouden beiden zich tegenover elkaar?</a>
 												</li>
@@ -245,6 +262,23 @@
 				<div>
 					<div class="drawer" data-drawer="related-questions" tabindex="-1">
 						<button class="drawer__close link link--icon--close js-drawer__close" title="sluiten"><span class="u-visually-hidden">Venster sluiten</span></button>
+
+						<div class="drawer__content" data-drawer-content="331988">
+							<div class="">
+								<div class="layout layout--wide">
+									<div class="layout__wrapper">
+										<div class="grid grid--align-center">
+											<div class="col--8-12 col--12-12--s col--6-12--l">
+												<div class="content typography">
+													<p>Alle identificatoren van informatie-objecten die beschikbaar zijn via dit domein in de vorm van een URI zijn persistent en semantisch éénduidig. Met andere woorden, gebruikers van de URI's met als domein data.vlaanderen.be kunnen ervan uitgaan dat deze identificatoren steeds zullen blijven bestaan en dat in de loop van de tijd deze identificatoren steeds zullen verwijzen naar één en hetzelfde object.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 
 						<div class="drawer__content" data-drawer-content="270933">
 							<div class="">
@@ -285,6 +319,10 @@
 		</div>
 	</div>
 	<!-- End page content -->
+
+
+	<div class="u-spacer--large">
+	</div>
 
 
 	<div id="vlaanderen-footer">
