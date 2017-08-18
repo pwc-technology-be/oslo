@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "skos":    "http://www.w3.org/2004/02/skos/core#",
+    "rdfs":    "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "@type": "skos:ConceptScheme",
+      "rdfs:label": {
+        "@language": "nl",
+        "@value": "Status Vlaamse Fase"
+      }
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Samenstelling",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "01",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Samenstelling"
+        },
+        {
+          "@language": "en",
+          "@value": "Compiling"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Behandeling",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "02",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Behandeling"
+        },
+        {
+          "@language": "en",
+          "@value": "Treatment"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Beslissing",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "03",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beslissing"
+        },
+        {
+          "@language": "en",
+          "@value": "Decision"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Beroep",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "04",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beroep"
+        },
+        {
+          "@language": "en",
+          "@value": "Appeal"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Uitvoering",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "05",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Uitvoering"
+        },
+        {
+          "@language": "en",
+          "@value": "Execution"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "@id": "http://data.vlaanderen.be/ns/statusvlaamsefase#Afgerond",
+      "@type": "skos:Concept",
+      "skos:inScheme": "http://data.vlaanderen.be/ns/statusvlaamsefase",
+      "skos:notation": "06",
+      "skos:prefLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afgerond"
+        },
+        {
+          "@language": "en",
+          "@value": "Terminated"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "nl",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "@language": "en",
+          "@value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    }
+  ]
+}
