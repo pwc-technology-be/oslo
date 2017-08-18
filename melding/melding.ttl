@@ -24,7 +24,7 @@
       a       owl:Class ;
       rdfs:comment "De waarde uit een codelijst."@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/melding> ;
-      rdfs:label "Codelijst Waarde"@nl ;
+      rdfs:label "Codelijst Waarde"@nl .
 
 <http://data.vlaanderen.be/ns/melding#Eigenschap>
       a       owl:Class ;

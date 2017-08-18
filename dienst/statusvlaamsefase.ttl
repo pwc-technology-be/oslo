@@ -1,0 +1,49 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase>
+  a skos:ConceptScheme ;
+  rdfs:label "Status Vlaamse Fase"@nl .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Samenstelling>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "01"^^xsd:string ;
+  skos:prefLabel "Samenstelling"@nl, "Compiling"@en .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Behandeling>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "02"^^xsd:string ;
+  skos:prefLabel "Behandeling"@nl, "Treatment"@en .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Beslissing>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "03"^^xsd:string ;
+  skos:prefLabel "Beslissing"@nl, "Decision"@en .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Beroep>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "04"^^xsd:string ;
+  skos:prefLabel "Beroep"@nl, "Appeal"@en .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Uitvoering>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "05"^^xsd:string ;
+  skos:prefLabel "Uitvoering"@nl, "Execution"@en .
+
+<http://data.vlaanderen.be/ns/statusvlaamsefase#Afgerond>
+  a skos:Concept ;
+  skos:definition "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@nl, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."@en ;
+  skos:inScheme "http://data.vlaanderen.be/ns/statusvlaamsefase"^^xsd:string ;
+  skos:notation "06"^^xsd:string ;
+  skos:prefLabel "Afgerond"@nl, "Terminated"@en .
