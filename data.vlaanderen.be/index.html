@@ -2,7 +2,7 @@
 
 <html lang="nl">
 <head>
-	<title>index.html</title>
+	<title>Welkom Data.Vlaanderen.be</title>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -64,12 +64,17 @@
 									<div class="side-navigation__group">
 										<ul>
 											<li class="side-navigation__item">
-												<a href="#CRAB-LOD">BETA release CRAB-LOD</a>
+												<a href="#Datasets">Datasets</a>
 											</li>
 
 
 											<li class="side-navigation__item">
-												<a href="#Specificaties">OSLO&#178; specificaties</a>
+												<a href="#Standaarden">Standaarden</a>
+											</li>
+
+
+											<li class="side-navigation__item">
+												<a href="#Tools">Tools</a>
 											</li>
 
 
@@ -121,7 +126,7 @@
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
 								<a class="doormat js-equal-height u-mobile-no-equal-height" href="http://data.vlaanderen.be/sparql" id="doormat">
 								<div class="doormat__title">
-									SPARQL-endpoint for CRAB-LOD
+									SPARQL-endpoint
 								</div>
 								<span class="doormat__text">Het SPARQL-endpoint biedt de mogelijkheid om complexe vragen in SPARQL te stellen over de beschikbare data.</span></a>
 							</li>
@@ -130,7 +135,7 @@
 							<li class="col--4-12 col--1-2--s col--12-12--xs">
 								<a class="doormat js-equal-height u-mobile-no-equal-height" href="http://data.vlaanderen.be/dumps" id="doormat">
 								<div class="doormat__title">
-									RDF-dump CRAB-LOD
+									RDF-dump
 								</div>
 								<span class="doormat__text">De publicatie van het linked open dataproduct, minimaal met dereferenceable URI’s aangeboden.</span></a>
 							</li>
@@ -167,53 +172,131 @@
 			</section>
 
 
-			<section class="info-block info-block--news" id="CRAB-LOD">
+			<section class="info-block info-block--news" id="Datasets">
 				<div class="layout layout--wide">
 					<header class="info-block__header">
-						<h1 class="info-block__title">BETA release CRAB-LOD</h1>
+						<h1 class="info-block__title">Datasets</h1>
 					</header>
 
 
-					<div class="info-block__content">
-						Data.Vlaanderen.be is in publieke BETA-versie beschikbaar. De beschikbare URI's van de CRAB-LOD dataset komen van een snapshot welke gedurende de BETA-periode op beperkte wijze gesynchroniseerd wordt gehouden met de gegevens uit het basisregister.
+					<div class="info-block__content">			
+						<p>Data.Vlaanderen.be voorziet de volgende toegangsmethoden tot de data:</p>
+						<br>
+						<ul class="bullet-list bullet-list--tag">
+							<li class="bullet-list__item">
+								<strong>Content negotatie</strong> De URI <a href="http://data.vlaanderen.be/id/adres/2185403">http://data.vlaanderen.be/id/adres/2185403</a> is de persistente identifier voor het adres Koningin Maria Hendrikaplein 70, Gent. Als deze URI opgevraagd wordt via een webbrowser dan verkrijgt men een menselijk leesbare webpagina waarop informatie over dit adres wordt weergegeven. Dezelfde informatie is ook aangeboden in machine-leesbare vorm zoals RDF. Reeds ondersteunde HTTP accept headers zijn text/html, application/rdf+xml, text/ntriples en text/turtle. Voor documenten en vocabularia worden de file-extenties .rdf, .nt en .ttl ook ondersteund als alternatief voor het instellen van de HTTP accept header.
+							</li>
+
+
+							<li class="bullet-list__item">
+								<strong>SPARQL endpoint</strong> Het <a href="http://data.vlaanderen.be/sparql">SPARQL-endpoint</a> biedt de mogelijkheid om complexe vragen in <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> te stellen over de beschikbare data.
+							</li>
+
+
+							<li class="bullet-list__item">
+								<strong>RDF-dump</strong> De publicatie van het linked open dataproduct, minimaal met dereferenceable URI’s aangeboden, is te vinden als RDF-dump op deze locatie <a href="http://data.vlaanderen.be/dumps">data.vlaanderen.be/dumps</a>.
+							</li>
+
+
+							<li class="bullet-list__item">
+								<strong>Vocabularia</strong> De beschrijving van de gebruikte vocabularia is <a href="ns.html">hier</a> te vinden.
+							</li>
+						</ul>
 					</div>
 					<br>
-					Data.Vlaanderen.be voorziet de volgende toegangsmethoden tot de data:
-
-					<ul class="bullet-list bullet-list--tag">
-						<li class="bullet-list__item">
-							<strong>Content negotatie</strong> De URI <a href="http://data.vlaanderen.be/id/adres/2185403">http://data.vlaanderen.be/id/adres/2185403</a> is de persistente identifier voor het adres Koningin Maria Hendrikaplein 70, Gent. Als deze URI opgevraagd wordt via een webbrowser dan verkrijgt men een menselijk leesbare webpagina waarop informatie over dit adres wordt weergegeven. Dezelfde informatie is ook aangeboden in machine-leesbare vorm zoals RDF. Reeds ondersteunde HTTP accept headers zijn text/html, application/rdf+xml, text/ntriples en text/turtle. Voor documenten en vocabularia worden de file-extenties .rdf, .nt en .ttl ook ondersteund als alternatief voor het instellen van de HTTP accept header.
-						</li>
+					<h3 class="h3">Beschikbare datasets</h3>
 
 
-						<li class="bullet-list__item">
-							<strong>SPARQL endpoint</strong> Het <a href="http://data.vlaanderen.be/sparql">SPARQL-endpoint</a> biedt de mogelijkheid om complexe vragen in <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> te stellen over de beschikbare data.
-						</li>
+					<!-- component -->
+			        <div class="grid grid--is-stacked u-spacer">
+			          	<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+				            <a href="https://overheid.vlaanderen.be/OSLO-CRAB-als-gelinkte-Open-Data" class="spotlight">
+				            	<article>
+				                	<header class="spotlight__header">
+				                  		<div class="spotlight__image spotlight__image--focus-center-center">
+				                    		<img class="spotlight__image__img" src="file:///C:/Users/vandeloc/Documents/Documents/AIV/AIV%20-%20PwC%20GitHub/data.vlaanderen.be/images/map-small.png" alt="">
+				                  		</div>
+				                  		<div class="spotlight__title-wrapper">
+				                    		<h1 class="spotlight__title">Beta release CRAB-LOD</h1>
+				                    	</div>
+				                	</header>
+				                	<div class="spotlight__text">
+				                		Een eerste dataset die ontsloten wordt op dit domein zijn de adressen uit het adressenregister (CRAB). De beschikbare URI's van de CRAB-LOD dataset komen van een snapshot welke gedurende de BETA-periode op beperkte wijze gesynchroniseerd wordt gehouden met de gegevens uit het basisregister.
+				                	</div>
+				              	</article>
+				            </a>
+			          	</div>
 
+			          	<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+			          		<a href="http://lokaalbestuur.vlaanderen.be/lokale-besluiten-als-gelinkte-open-data" class="spotlight">
+				            	<article>
+				                	<header class="spotlight__header">
+				                  		<div class="spotlight__image spotlight__image--focus-center-center">
+				                    		<img class="spotlight__image__img" src="file:///C:/Users/vandeloc/Documents/Documents/AIV/AIV%20-%20PwC%20GitHub/data.vlaanderen.be/images/files-small.png" alt="">
+				                  		</div>
+				                  		<div class="spotlight__title-wrapper">
+				                    		<h1 class="spotlight__title">LBLOD</h1>
+				                    	</div>
+				                	</header>
+				                	<div class="spotlight__text">
+				                		Het project heeft als doel informatie uit besluiten van lokale besturen vindbaar te maken en op een gestandaardiseerde manier aan te bieden waardoor iedereen (andere overheden, ondernemingen, …) rechtstreeks met de data aan de slag kan gaan.
+				                	</div>
+				              	</article>
+			              	</a>
+			          	</div>
 
-						<li class="bullet-list__item">
-							<strong>RDF-dump</strong> De publicatie van het linked open dataproduct, minimaal met dereferenceable URI’s aangeboden, is te vinden als RDF-dump op deze locatie <a href="http://data.vlaanderen.be/dumps">data.vlaanderen.be/dumps</a>.
-						</li>
+			        </div>
+			        <!-- end component -->
 
-
-						<li class="bullet-list__item">
-							<strong>Vocabularia</strong> De beschrijving van de gebruikte vocabularia is <a href="ns.html">hier</a> te vinden.
-						</li>
-					</ul>
 				</div>
 			</section>
 
 
-			<section class="region region--alt" id="Specificaties">
+			<section class="region region--alt" id="Standaarden">
 				<div class="layout layout--wide">
-					<h1 class="h1 u-named-anchor" id="Specificaties">OSLO&#178; Specificaties (kandidaat-standaarden)</h1>
+					<h2 class="h2 u-named-anchor" id="Standaarden">Standaarden</h2>
 
+					<h3 class="h3">URI standaard</h2>
 
-					<p>Op 31 maart 2017 werden een aantal vocabularia en applicatieprofielen als kandidaat-standaard gepubliceerd door de werkgroep OSLO&#178; van Informatie Vlaanderen. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze kandidaat-standaarden. Na deze evaluatieperiode, waarbij aan de hand van referentie implementaties de robuustheid en de volledigheid van de vocabularia en de applicatieprofielen worden getest, worden de OSLO&#178; specificaties gepromoot tot volwaardige standaarden.</p><br>
-					<p> Feedback kan je geven via <a href="mailto:oslo@kb.vlaanderen.be">email</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>
-					<br>
+						<p>
+							Centraal in de URI-standaard staan een aantal vormregels die omschrijven op welke wijze je een URI moet opbouwen. Gebruik makend van de vormregels voor URI’s zal via de URI-standaard een lijst van resource-classificaties toegelicht worden. Die moeten alle resource-aanbieders binnen de Vlaamse overheden gebruiken bij het opzetten van nieuwe URI’s om hun resources uniek en persistent te ontsluiten.
+						</p>
+						<br>
+						<a href="https://overheid.vlaanderen.be/OSLO-URI-standaard" class="link--icon--caret link--block">
+							Ontdek hier meer over de Vlaamse URI standaard.
+						</a>
+						<br>
 
-					<a href="" class="link--icon--caret link--block">Ontdek hier de beschikbare vocabularia en applicatieprofielen.</a>
+					<h3 class="h3">API standaard</h3>
+
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<br>
+
+					<h3 class="h3">OSLO&#178; Specificaties (kandidaat-standaarden)</h3>
+
+						<p>
+							Op 31 maart 2017 werden een aantal vocabularia en applicatieprofielen als kandidaat-standaard gepubliceerd door de werkgroep OSLO&#178; van Informatie Vlaanderen. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze kandidaat-standaarden. Na deze evaluatieperiode, waarbij aan de hand van referentie implementaties de robuustheid en de volledigheid van de vocabularia en de applicatieprofielen worden getest, worden de OSLO&#178; specificaties gepromoot tot volwaardige standaarden.
+						</p>
+						<br>
+						<p> 
+							Feedback kan je geven via <a href="mailto:oslo@kb.vlaanderen.be">email</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>
+						<br>
+
+						<a href="https://pwc-technology-be.github.io/oslo/data.vlaanderen.be/ns.html" class="link--icon--caret link--block">
+							Ontdek hier de beschikbare vocabularia en applicatieprofielen.
+						</a>
+				</div>
+			</section>
+
+			<section class="region" id="Tools">
+				<div class="layout layout--wide">
+					<h2 class="h2 u-named-anchor" id="Tools">Tools</h2>
+				
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+				</p>
 				</div>
 			</section>
 
