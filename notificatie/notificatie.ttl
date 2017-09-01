@@ -19,12 +19,12 @@
       vann:preferredNamespaceUri
               "http://data.vlaanderen.be/ns/notificatie" .
 
-<http://data.vlaanderen.be/ns/notificatie#NotificatieType>
+<http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie>
       a       owl:Class ;
-      rdfs:comment "Het type van de notificatie."@nl ;
+      rdfs:comment "De categorie van de notificatie."@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
-      rdfs:label "Notificatie Type"@nl ;
-      owl:oneOf (<http://data.vlaanderen.be/ns/notificatie/NotificatieType/Wetswijziging> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/NieuweSubsidiemaatregel> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/AlgemeenNieuwsbericht> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/WijzigingDossier> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/VergunningVerloopt> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/ActieNodig> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/CalamiteitInUwGemeente> <http://data.vlaanderen.be/ns/notificatie/NotificatieType/WegenwerkenInUwBuurt>) .
+      rdfs:label "Notificatie Categorie"@nl ;
+      owl:oneOf (<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/Wetswijziging> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/NieuweSubsidiemaatregel> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/AlgemeenNieuwsbericht> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/WijzigingDossier> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/VergunningVerloopt> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/ActieNodig> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/CalamiteitInUwGemeente> <http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/WegenwerkenInUwBuurt>) .
 
 <http://data.vlaanderen.be/ns/notificatie#Notificatiebericht>
       a       owl:Class ;
@@ -64,12 +64,12 @@
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Status"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie#StatusNotificatie>
+<http://data.vlaanderen.be/ns/notificatie#NotificatieStatus>
       a       owl:Class ;
       rdfs:comment "De status die een Notificatie kan aannemen."@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Status Notificatie"@nl ;
-      owl:oneOf (<http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/KlaarVoorVerzending> <http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/Verstuurd> <http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/Gelezen>) .
+      owl:oneOf (<http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/KlaarVoorVerzending> <http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/Verstuurd> <http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/Gelezen>) .
 
 <http://data.vlaanderen.be/ns/notificatie#agent>
        a       rdf:Property , owl:ObjectProperty ;
@@ -136,58 +136,66 @@
       rdfs:label "permissie"@nl ;
       rdfs:range <http://data.vlaanderen.be/ns/notificatie#PermissieType> .
 
-<http://data.vlaanderen.be/ns/notificatie#statusNotificatie>
+<http://data.vlaanderen.be/ns/notificatie#status>
+      a       owl:ObjectProperty ;
+      rdfs:comment "De status van een Notificiatiebericht per bestemmeling."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/notificatie#Notificatiebericht> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
+      rdfs:label "status"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/notificatie#Status> .
+
+<http://data.vlaanderen.be/ns/notificatie#notificatieStatus>
       a       owl:ObjectProperty ;
       rdfs:comment "De status van de notificatie voor een bepaalde bestemmeling."@nl ;
       rdfs:domain <http://data.vlaanderen.be/ns/notificatie#Status> ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
-      rdfs:label "status notificatie"@nl ;
-      rdfs:range <http://data.vlaanderen.be/ns/notificatie#StatusNotificatie> .
+      rdfs:label "notificatie status"@nl ;
+      rdfs:range <http://data.vlaanderen.be/ns/notificatie#NotificatieStatus> .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/ActieNodig>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/ActieNodig>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Actie nodig"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/AlgemeenNieuwsbericht>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/AlgemeenNieuwsbericht>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Algemeen nieuwsbericht"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/CalamiteitInUwGemeente>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/CalamiteitInUwGemeente>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Calamiteit in uw gemeente"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/NieuweSubsidiemaatregel>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/NieuweSubsidiemaatregel>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Nieuwe subsidiemaatregel"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/VergunningVerloopt>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/VergunningVerloopt>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Vergunning verloopt"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/WegenwerkenInUwBuurt>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/WegenwerkenInUwBuurt>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Wegenwerken in uw buurt"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/Wetswijziging>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/Wetswijziging>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Wetswijziging"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/NotificatieType/WijzigingDossier>
-      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieType> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieCategorie/WijzigingDossier>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Wijziging Dossier"@nl .
@@ -228,20 +236,20 @@
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Toegelaten"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/Gelezen>
-      a       <http://data.vlaanderen.be/ns/notificatie#StatusNotificatie> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/Gelezen>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieStatus> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Gelezen"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/KlaarVoorVerzending>
-      a       <http://data.vlaanderen.be/ns/notificatie#StatusNotificatie> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/KlaarVoorVerzending>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieStatus> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Klaar voor verzending"@nl .
 
-<http://data.vlaanderen.be/ns/notificatie/StatusNotificatie/Verstuurd>
-      a       <http://data.vlaanderen.be/ns/notificatie#StatusNotificatie> ;
+<http://data.vlaanderen.be/ns/notificatie/NotificatieStatus/Verstuurd>
+      a       <http://data.vlaanderen.be/ns/notificatie#NotificatieStatus> ;
       rdfs:comment "TODO"@nl ;
       rdfs:isDefinedBy <http://data.vlaanderen.be/ns/notificatie> ;
       rdfs:label "Verstuurd"@nl .

@@ -255,7 +255,7 @@
       </div>
       <div class="region region--no-space-top">
           <div class="layout layout--normal">
-            <img src="http://52.50.205.146:8890/aiv/Informatiemodel-Notificatie-v0.06.png" />
+            <img src="http://52.50.205.146:8890/aiv/Informatiemodel-Notificatie.png" />
           </div>
       </div>
       
@@ -712,9 +712,9 @@ die toelaat de Organisatie te contacteren.</td>
                                 </a>
                             </code>
                             </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#NotificatieType" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#NotificatieType" data-placement="right">NotificatieType</a></td>
+                            <td><a href="http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie" data-placement="right">NotificatieCategorie</a></td>
                             <td>1 .. 1</td>
-                            <td property="rdfs:comment">Het type van het Notificatiebericht.</td>
+                            <td property="rdfs:comment">De categorie van de notificatie.</td>
                             <td property="vann:usageNote"></td>
                             <td></td>
                           </tr>
@@ -733,7 +733,7 @@ die toelaat de Organisatie te contacteren.</td>
                             </code>
                             </td>
                             <td><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">PubliekeOrganisatie</a></td>
-                            <td>1 .. 1</td>
+                            <td>0 .. 1</td>
                             <td property="rdfs:comment">Duidt de bron aan van een Notificatiebericht.</td>
                             <td property="vann:usageNote"></td>
                             <td></td>
@@ -780,6 +780,26 @@ die toelaat de Organisatie te contacteren.</td>
                           </tr>
                           
                           
+                          
+                          
+                          <tr typeof="rdfs:Property" resource="http://schema.org/sender">
+                            <td>
+                            <code property="rdfs:label">
+                                <a href="http://data.vlaanderen.be/ns/notificatie#status" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#status" data-placement="right">
+                                
+                                status
+                                
+                                </a>
+                            </code>
+                            </td>
+                            <td><a href="http://data.vlaanderen.be/ns/notificatie#Status" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Status" data-placement="right">Status</a></td>
+                            <td>0 .. *</td>
+                            <td property="rdfs:comment">De status van een Notificiatiebericht per bestemmeling.</td>
+                            <td property="vann:usageNote"></td>
+                            <td></td>
+                          </tr>
+                          
+                          
                           </tbody>
                         </table>
                         
@@ -805,6 +825,14 @@ die toelaat de Organisatie te contacteren.</td>
   {
     "@id": "https://data.vlaanderen.be/id/geregistreerdepersoon/1234",
     "@type": "GeregistreerdPersoon"
+  }
+],
+"status": [
+  {
+    "datumVerzending": "2017-08-31 14:54:22.100",
+    "statusNotificatie": "Gelezen",
+    "notificatiekanaal": "Passief",
+    "datumGelezen": "2017-08-31 14:54:22.100"
   }
 ],
 "afzender": {
@@ -1199,7 +1227,7 @@ die toelaat de Organisatie te contacteren.</td>
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: datumVerzending, statusNotificatie, notificatiekanaal, datumGelezen, bestemmeling.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: datumVerzending, notificatieStatus, notificatiekanaal, datumGelezen, bestemmeling.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -1238,17 +1266,17 @@ die toelaat de Organisatie te contacteren.</td>
                           
                           
                           
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#statusNotificatie">
+                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#notificatieStatus">
                             <td>
                             <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#statusNotificatie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#statusNotificatie" data-placement="right">
+                                <a href="http://data.vlaanderen.be/ns/notificatie#notificatieStatus" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#notificatieStatus" data-placement="right">
                                 
-                                statusNotificatie
+                                notificatieStatus
                                 
                                 </a>
                             </code>
                             </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#StatusNotificatie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#StatusNotificatie" data-placement="right">StatusNotificatie</a></td>
+                            <td><a href="http://data.vlaanderen.be/ns/notificatie#NotificatieStatus" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#NotificatieStatus" data-placement="right">NotificatieStatus</a></td>
                             <td>1 .. 1</td>
                             <td property="rdfs:comment">De status van een notificatie voor een bepaalde bestemmeling.</td>
                             <td property="vann:usageNote"></td>
@@ -1344,7 +1372,7 @@ die toelaat de Organisatie te contacteren.</td>
                           <pre class="prettyprint">
 "@type": "Status",
 "datumVerzending": "2017-07-10 09:00:00.000",
-"statusNotificatie": "Verstuurd",
+"notificatieStatus": "Verstuurd",
 "notificatiekanaal": ["Email", "Sms"],
 "datumGelezen": "2017-07-10 11:53:12.453",
 "notificatiebericht": "https://data.vlaanderen.be/id/notificatiebericht/201707202351",
@@ -1740,9 +1768,9 @@ die toelaat de Organisatie te contacteren.</td>
       "@id":"http://schema.org/dateSent",
       "@type":"http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "statusNotificatie":{
-      "@id":"http://data.vlaanderen.be/ns/notificatie#statusNotificatie",
-      "@type":"http://data.vlaanderen.be/ns/notificatie#StatusNotificatie"
+    "notificatieStatus":{
+      "@id":"http://data.vlaanderen.be/ns/notificatie#notificatieStatus",
+      "@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieStatus"
     },
     "notificatiekanaal":{
       "@id":"http://data.vlaanderen.be/ns/notificatie#notificatiekanaal",
@@ -1796,7 +1824,7 @@ die toelaat de Organisatie te contacteren.</td>
     },
     "type":{
       "@id":"http://purl.org/dc/terms/type",
-      "@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieType"
+      "@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie"
     },
     "voorkeursnaam":{
       "@id":"http://www.w3.org/2004/02/skos/core#prefLabel",

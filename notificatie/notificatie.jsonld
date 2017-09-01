@@ -49,19 +49,19 @@
 		},
 		"label":{
 			"@id":"http://www.w3.org/2000/01/rdf-schema#label",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"waarde":{
 			"@id":"http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"datumVerzending":{
 			"@id":"http://schema.org/dateSent",
 			"@type":"http://www.w3.org/2001/XMLSchema#dateTime"
 		},
-		"statusNotificatie":{
-			"@id":"http://data.vlaanderen.be/ns/notificatie#statusNotificatie",
-			"@type":"http://data.vlaanderen.be/ns/notificatie#StatusNotificatie"
+		"notificatieStatus":{
+			"@id":"http://data.vlaanderen.be/ns/notificatie#notificatieStatus",
+			"@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieStatus"
 		},
 		"notificatiekanaal":{
 			"@id":"http://data.vlaanderen.be/ns/notificatie#notificatiekanaal",
@@ -74,7 +74,7 @@
 		},
 		"naam":{
 			"@id":"http://schema.org/name",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"url":{
 			"@id":"http://schema.org/url",
@@ -111,15 +111,15 @@
 		},
 		"titel":{
 			"@id":"http://purl.org/dc/elements/1.1/title",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"type":{
 			"@id":"http://purl.org/dc/terms/type",
-			"@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieType"
+			"@type":"http://data.vlaanderen.be/ns/notificatie#NotificatieCategorie"
 		},
 		"voorkeursnaam":{
 			"@id":"http://www.w3.org/2004/02/skos/core#prefLabel",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"isVerantwoordelijkVoor":{
 			"@id":"http://data.vlaanderen.be/ns/notificatie#isVerantwoordelijkVoor",
@@ -128,7 +128,7 @@
 		},
 		"aanschrijfvorm":{
 			"@id":"http://ww.w3.org/2006/vcard/ns#honorific-prefix",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"adres":{
 			"@id":"http://www.w3.org/ns/locn#address",
@@ -136,23 +136,23 @@
 		},
 		"beschikbaarheid":{
 			"@id":"http://schema.org/telephone",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"contactnaam":{
 			"@id":"http://xmlns.com/foaf/0.1/name",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"email":{
 			"@id":"http://schema.org/email",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"fax":{
 			"@id":"http://schema.org/faxNumber",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"telefoon":{
 			"@id":"http://schema.org/telephone",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Literal"
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
 		},
 		"website":{
 			"@id":"http://xmlns.com/foaf/0.1/page",
