@@ -31,14 +31,14 @@
 
   <!-- Start page content -->
   <div class="page">
-    <div class="layout layout--normal">
+    <div class="layout layout--wide">
       <div class="skiplink">
         <a rel="nofollow noreferrer" href="#main">Overslaan en naar de algemene inhoud gaan</a>
       </div>
     </div>
     <div class="page">
     <div class="region">
-        <div class="layout layout--normal">
+        <div class="layout layout--wide">
             <div class="grid u-hr">
                 <div class="col--9-12 col--1-1--s">
                     <h1 class="h1">Toestemming Applicatieprofiel</h1>
@@ -52,10 +52,12 @@
     </div>
     <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
       <div class="region">
-        <div class="layout layout--normal">
+        <div class="layout layout--wide">
             <div class="grid">
-                <div class="col--9-12 col--1-1--s">
-                <div class="introduction typography">
+                <div class="col--8-12 col--12-12--s">
+      
+      <div class="region region--no-space-top">
+                <div class="introduction typography" id="abstract">
                             <p>Dit document beschrijft een <strong>applicatieprofiel</strong> voor <strong>Toestemming</strong>.
                             Een applicatieprofiel is een specificatie die bestaande termen hergebruikt van verschillende basis-standaarden en daar meer specificiteit aan toevoegt.
                             Daarbij wordt het gebruik van de termen toegelicht voor de interbestuurlijke uitwisseling van overheidsinformatie.
@@ -63,21 +65,13 @@
                             Daarbij worden de beperkingen (kardinaliteit, codelijsten) toegelicht en de overeenkomstige (RDF) termen opgelijst.
                             </p>
                 </div>
-                </div>
-            </div>
-        </div>
       </div>
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region region--no-space-top" id="license-and-liability">
             <h2 class="h2"><span class="secno">1.</span> Licentie</h2>
             <p><span xmlns:dct="http://purl.org/dc/terms/" rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text">Deze specificatie</span> van <a xmlns:cc="http://creativecommons.org/ns#" rel="cc:attributionURL" property="cc:attributionName" href="http://vlaanderen.be/informatievlaanderen">Informatie Vlaanderen</a> is gepubliceerd onder de <a href="https://overheid.vlaanderen.be/sites/default/files/documenten/ict-egov/licenties/hergebruik/modellicentie_gratis_hergebruik_v1_0.html" rel="license">"Modellicentie Gratis Hergebruik - v1.0"</a>.</p>
-          </div>
       </div>
-      <div class="region region--no-space-top">
-        <div class="layout layout--normal">
-        <div class="grid">
-        <div class="col--9-12 col--1-1--s typography">
-        <h2 class="h2" id="conformance" aria-level="1" role="heading"><span class="secno">2.</span> Conformiteit</h2>
+      <div class="region region--no-space-top typography" id="conformance-statement">
+        <h2 class="h2" aria-level="1" role="heading"><span class="secno">2.</span> Conformiteit</h2>
 
         <p>Een applicatieprofiel is een specificatie voor gegevensuitwisseling dat bijkomende beperkingen introduceert voor het toepassen van vocabularia.
         Dergelijke bijkomende beperkingen kunnen de volgende elementen bevatten:</p>
@@ -99,15 +93,9 @@
         <li>Mag uitgebreid worden met klassen en eigenschappen van andere datamodellen (vocabularia) die niet overlappen met terminologie uit dit applicatieprofiel.</li>
         </ul>
         </p>
-        </div>
-        </div>
     </div>
-    </div>
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region region--no-space-top" id="overview">
             <h2 class="h2"><span class="secno">3.</span> Overzicht</h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
                         <p> In dit document wordt correct gebruik van de volgende entiteiten toegelicht:
                             <br />
@@ -123,24 +111,14 @@
                             <a href="#ToestemmingDescriptor">ToestemmingDescriptor</a> |
                             
                          </p>
-                    </div>
-                    
-              </div>
-            </div>
-          </div>
+                    </div>      
       </div>
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
-            <img src="http://52.50.205.146:8890/aiv/Applicatieprofiel-Toestemming.png" />
-          </div>
+            <img src="http://52.50.205.146:8890/aiv/Informatiemodel-Toestemming.png" />
       </div>
       
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region">
             <h2 class="h2" id="Contactvoorkeur"><a href="http://data.vlaanderen.be/ns/toestemming#Contactvoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/toestemming#Contactvoorkeur" data-placement="right">Contactvoorkeur</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Een expliciete toestemming voor het bijhouden en gebruiken van contactgegevens, gegeven door een bepaalde Agent die het onderwerp vormt van de contactgegevens of hiervoor bevoegd is.</p></div>
                     <div><p>Contactvoorkeur is een subklasse van <a href="#Toestemming">Toestemming</a></p></div>
                     
@@ -238,7 +216,7 @@
                             <td><a href="" data-toggle="tooltip" data-content="" data-placement="right">Contactkanaal</a></td>
                             <td>1 .. 1</td>
                             <td property="rdfs:comment">Het kanaal of medium langs waar een gebruiker gecontacteerd kan worden. Bijvoorbeeld Burgerloket, sms of e-mail.</td>
-                            <td property="vann:usageNote">Het contactkanaal is één van de contactkanalen die door de data controller werd geconfigureerd in de <a href="#ContactvoorkeurDescriptor">ContactvoorkeurDescriptor.</a></td>
+                            <td property="vann:usageNote">Het contactkanaal is één van de contactkanalen die door de data controller werd geconfigureerd in de <a href="#ContactvoorkeurDescriptor">ContactvoorkeurDescriptor</a>.</td>
                             <td></td>
                           </tr>
                           
@@ -285,20 +263,12 @@
 "notificatiecategorie": { "@id": "http://data.vlaanderen.be/doc/concept/Notificatiecategorie/DossiergerelateerdBericht.ActieNodig" }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region">
             <h2 class="h2" id="ContactvoorkeurDescriptor"><a href="http://data.vlaanderen.be/ns/toestemming#ContactvoorkeurDescriptor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/toestemming#ContactvoorkeurDescriptor" data-placement="right">ContactvoorkeurDescriptor</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>De blauwdruk van een contactvoorkeur zoals geconfigureerd door de data controller. Omvat de contact kanalen langs waar eindgebruikers communicatie of notificaties kunnen ontvangen.</p></div>
-                    <div><p>ContactvoorkeurDescriptor is een subklasse van <a href="#ToestemmingDescriptor">ToestemmingDescriptor</p></div>
+                    <div><p>ContactvoorkeurDescriptor is een subklasse van <a href="#ToestemmingDescriptor">ToestemmingDescriptor</a></p></div>
                     
                     
                     
@@ -362,19 +332,11 @@
 "isGerelateerdMet": "http://productencatalogus.vlaanderen.be/fiche/685"
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
             
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region">
             <h2 class="h2" id="Toestemming"><a href="http://data.vlaanderen.be/ns/toestemming#Toestemming" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/toestemming#Toestemming" data-placement="right">Toestemming</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Een expliciete toestemming, gegeven door een bepaalde Agent die het onderwerp vormt van de persoonlijke informatie.</p></div>
                     <div><p></p></div>
                     
@@ -515,18 +477,10 @@
 "descriptor": "/toestemmingdescriptor/1234"
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region">
             <h2 class="h2" id="ToestemmingDescriptor"><a href="http://data.vlaanderen.be/ns/toestemming#ToestemmingDescriptor" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/toestemming#ToestemmingDescriptor" data-placement="right">ToestemmingDescriptor</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>De blauwdruk van een toestemming zoals geconfigureerd door de data controller. Omvat o.a. informatie over de databron en data processor.</p></div>
                     <div><p></p></div>
                     
@@ -692,17 +646,9 @@
 "isGerelateerdMet": "http://productencatalogus.vlaanderen.be/fiche/685"
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>      
-        <div class="region region--no-space-top">
-          <div class="layout layout--normal">
-            <h3 class="h2" id="Context"><span class="secno">4.</span> JSON-LD Context</h3>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
+        <div class="region" id="context">
+            <h3 class="h2"><span class="secno">4.</span> JSON-LD Context</h3>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {
@@ -786,17 +732,9 @@
 }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>    
-          </div>
       </div>
-        <div class="region region--no-space-top">
-          <div class="layout layout--normal">
-            <h3 class="h2" id="Context"><span class="secno">4.</span> Voorbeeld JSON-LD: overzicht van toestemmingen voor een persoon, alle details opgenomen als geneste objecten.</h3>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
+        <div class="region" id="example">
+            <h3 class="h2"><span class="secno">5.</span> Voorbeeld JSON-LD: overzicht van toestemmingen voor een persoon, alle details opgenomen als geneste objecten.</h3>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {
@@ -964,12 +902,41 @@
 }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>    
-          </div>
+
       </div>
+
   </div>
+                    <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m" id="sideNav">
+                        <nav class="side-navigation js-sticky region" id="sideNav">
+                            <div class="side-navigation__content js-scrollspy">
+                                <div class="side-navigation__group">
+                                    <ul>
+                                        <li class="side-navigation__item">
+                                            <a href="#abstract">Abstract</a>
+                                        </li>                                                                              
+                                        <li class="side-navigation__item">
+                                            <a href="#license-and-liability">1. Licentie</a>
+                                        </li>                                       
+                                        <li class="side-navigation__item">
+                                            <a href="#conformance-statement">2. Conformiteit</a>
+                                        </li>                                       
+                                        <li class="side-navigation__item">
+                                            <a href="#overview">3. Overzicht</a>
+                                        </li>                                    
+                                        <li class="side-navigation__item">
+                                            <a href="#context">4. JSON-LD Context</a>
+                                        </li>                                    
+                                        <li class="side-navigation__item">
+                                            <a href="#example">5. JSON-LD voorbeeld</a>
+                                        </li>                                  
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </nav>
+                    </div> 
+
+
+</div>
   <!-- End page content -->
 
 
