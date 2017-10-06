@@ -41,13 +41,13 @@
         <div class="layout layout--normal">
             <div class="grid u-hr">
                 <div class="col--9-12 col--1-1--s">
-                    <h1 class="h1">notificatie-profiel-ap</h1>
+                    <h1 class="h1">Notificatie AP</h1>
                     <div class="head" role="contentinfo" id="respecHeader">
                         <dl>
                         
                         <dt>Laatste aanpassing</dt>
 
-                        <dd>2017-07-13
+                        <dd>2017-09-08
                         </dd>
                         
 
@@ -154,10 +154,11 @@
     </div>
     <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
       <div class="region">
-        <div class="layout layout--normal">
+        <div class="layout layout--wide">
             <div class="grid">
-                <div class="col--9-12 col--1-1--s">
-                <div class="introduction typography">
+                <div class="col--8-12 col--12-12--s">
+      <div class="region region--no-space-top">
+                <div class="introduction typography" id="abstract">
                             <p>Dit document beschrijft een <strong>applicatieprofiel</strong> voor <strong>de Generieke Notificatiecomponent</strong>, in dit geval <strong>Notificatie AP</strong>.
                             Een applicatieprofiel is een specificatie die bestaande termen hergebruikt van verschillende basis-standaarden
                             en daar meer specificiteit aan toevoegt.
@@ -166,20 +167,12 @@
                             Daarbij worden de beperkingen (kardinaliteit, codelijsten) toegelicht en de overeenkomstige (RDF) termen opgelijst.
                             </p>
                 </div>
-                </div>
-            </div>
-        </div>
       </div>
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region region--no-space-top" id="license-and-liability">
             <h2 class="h2"><span class="secno">1.</span> Licentie</h2>
             <p><span xmlns:dct="http://purl.org/dc/terms/" rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text">Deze specificatie</span> van <a xmlns:cc="http://creativecommons.org/ns#" rel="cc:attributionURL" property="cc:attributionName" href="http://vlaanderen.be/informatievlaanderen">Informatie Vlaanderen</a> is gepubliceerd onder de <a href="https://overheid.vlaanderen.be/sites/default/files/documenten/ict-egov/licenties/hergebruik/modellicentie_gratis_hergebruik_v1_0.html" rel="license">"Modellicentie Gratis Hergebruik - v1.0"</a>.</p>
-          </div>
       </div>
-      <div class="region region--no-space-top">
-        <div class="layout layout--normal">
-        <div class="grid">
-        <div class="col--9-12 col--1-1--s typography">
+      <div class="region region--no-space-top typography" id="conformance-statement">
         <h2 class="h2" id="conformance" aria-level="1" role="heading"><span class="secno">2.</span> Conformiteit</h2>
 
         <p>Een applicatieprofiel is een specificatie voor gegevensuitwisseling dat bijkomende beperkingen introduceert voor het toepassen van vocabularia.
@@ -202,15 +195,9 @@
         <li>Mag uitgebreid worden met klassen en eigenschappen van andere datamodellen (vocabularia) die niet overlappen met terminologie uit dit applicatieprofiel.</li>
         </ul>
         </p>
-        </div>
-        </div>
     </div>
-    </div>
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
+      <div class="region region--no-space-top" id="overview">
             <h2 class="h2"><span class="secno">3.</span> Overzicht</h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
                         <p> In dit document wordt correct gebruik van de volgende entiteiten toegelicht:
                             <br />
@@ -224,11 +211,7 @@
                             <a href="#Merk">Merk</a> |
                             
                             <a href="#Notificatiebericht">Notificatiebericht</a> |
-                            
-                            <a href="#Notificatievoorkeur">Notificatievoorkeur</a> |
-                            
-                            <a href="#PersoonlijkProfielDocument">PersoonlijkProfielDocument</a> |
-                            
+                                                                                    
                             <a href="#PubliekeOrganisatie">PubliekeOrganisatie</a> |
                             
                             <a href="#Status">Status</a> |
@@ -248,23 +231,13 @@
                             
                          </p>
                     </div>
-                    
-              </div>
-            </div>
-          </div>
       </div>
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <img src="http://52.50.205.146:8890/aiv/Informatiemodel-Notificatie.png" />
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="GeregistreerdPersoon"><a href="http://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon" data-placement="right">GeregistreerdPersoon</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Persoon waarvan de gegevens zijn ingeschreven in een register.</p></div>
                     <div><p>Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb Naam en Voornaam) en de Verblijfplaats vd Persoon en op belangrijke levensgebeurtenissen zoals Geboorte, Huwelijk, Overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven Persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking.</p></div>
                     
@@ -324,18 +297,10 @@ die toelaat de Persoon te contacteren.</td>
 }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="GeregistreerdeOrganisatie"><a href="http://www.w3.org/ns/regorg#RegisteredOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/regorg#RegisteredOrganization" data-placement="right">GeregistreerdeOrganisatie</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met Formele Organisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.</p></div>
                     <div><p></p></div>
                     
@@ -395,24 +360,16 @@ die toelaat de Organisatie te contacteren.</td>
 }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="Merk"><a href="http://schema.org/Brand" data-toggle="tooltip" data-content="http://schema.org/Brand" data-placement="right">Merk</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>De naam gebruikt door een Publieke Organisatie om te communiceren over een bepaalde Publieke Dienstverlening.</p></div>
                     <div><p></p></div>
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: naam, url, isTeBereikenOp, isGerelateerdAan, notificatievoorkeur.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: naam, url, isTeBereikenOp, isGerelateerdAan.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -509,26 +466,6 @@ die toelaat de Organisatie te contacteren.</td>
                           </tr>
                           
                           
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-placement="right">
-                                
-                                notificatievoorkeur
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-placement="right">Notificatievoorkeur</a></td>
-                            <td>1 .. *</td>
-                            <td property="rdfs:comment">De notificatievoorkeur van de entiteit.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
                           </tbody>
                         </table>
                         
@@ -560,24 +497,14 @@ die toelaat de Organisatie te contacteren.</td>
       "trefwoord": "Economie en Werk",
       "executieStatus": [ "Samenstelling", "Behandeling", "Beslissing", "Beroep", "Uitvoering", "Afgerond" ] 
     }
-  ],
-"notificatieVoorkeur": {
-  ...
-}
+]
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="Notificatiebericht"><a href="http://data.vlaanderen.be/ns/notificatie#Notificatiebericht" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatiebericht" data-placement="right">Notificatiebericht</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
+
                     <div><p>Een Notificatiebericht van een afzender naar een bestemmeling.</p></div>
                     <div><p></p></div>
                     
@@ -840,250 +767,18 @@ die toelaat de Organisatie te contacteren.</td>
 }
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
-            <h2 class="h2" id="Notificatievoorkeur"><a href="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-placement="right">Notificatievoorkeur</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
-                    <div><p>De klasse om voorkeuren met betrekking tot notificaties te beschrijven.</p></div>
-                    <div><p></p></div>
-                    
-                    
-                    
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: frequentie, notificatiekanaal, permissie.</p></div>
-                    </div>
-                    <div class="u-table-overflow">
-                        <table class="data-table">
-                          <thead>
-                          <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                            <th class="data-table__header-title--sortable">Verwacht Type</th>
-                            <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                            <th class="data-table__header-title--sortable">Beschrijving</th>
-                            <th class="data-table__header-title--sortable">Gebruik</th>
-                            <th class="data-table__header-title--sortable">Codelijst</th>
-                          </tr>
-                          </thead>
 
-                          <tbody class="supertype">
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#frequentie">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#frequentie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#frequentie" data-placement="right">
-                                
-                                frequentie
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="" data-toggle="tooltip" data-content="" data-placement="right">Frequentie</a></td>
-                            <td>0 .. 1</td>
-                            <td property="rdfs:comment">De frequentie waarmee genotificeerd wordt.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#notificatiekanaal">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#notificatiekanaal" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#notificatiekanaal" data-placement="right">
-                                
-                                notificatiekanaal
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#Notificatiekanaal" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatiekanaal" data-placement="right">Notificatiekanaal</a></td>
-                            <td>1 .. 1</td>
-                            <td property="rdfs:comment">Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden.</td>
-                            <td property="vann:usageNote">Wordt in de context van Notificatievoorkeur gebruikt om aan te duiden voor welk notificatiekanaal de voorkeur geldt.</td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#permissie">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#permissie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#permissie" data-placement="right">
-                                
-                                permissie
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#PermissieType" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#PermissieType" data-placement="right">PermissieType</a></td>
-                            <td>1 .. 1</td>
-                            <td property="rdfs:comment">De permissie die werd toegekend door de bestemmeling om al dan niet notificaties te ontvangen van een bepaalde afzender met een bepaalde frequentie.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          </tbody>
-                        </table>
-                        
-                    </div>                   
-                    <div class="example">
-                        <span>Voorbeeld JSON-LD:</span>
-                        <div style="background:#efefef">
-                          <pre class="prettyprint">
-"@type": "Notificatievoorkeur",
-"notificatiekanaal": "Email",
-"permissie": "Toegelaten"
-</pre>
-                      </div>
-                    </div>
-              </div>
-            </div>
-          </div>
-      </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
-            <h2 class="h2" id="PersoonlijkProfielDocument"><a href="http://xmlns.com/foaf/0.1/PersonalProfileDocument" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/PersonalProfileDocument" data-placement="right">PersoonlijkProfielDocument</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
-                    <div><p>Een persoonlijk profiel document,voorgesteld in RDF.</p></div>
-                    <div><p></p></div>
-                    
-                    
-                    
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: primairOnderwerp, notificatievoorkeur, maker.</p></div>
-                    </div>
-                    <div class="u-table-overflow">
-                        <table class="data-table">
-                          <thead>
-                          <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                            <th class="data-table__header-title--sortable">Verwacht Type</th>
-                            <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                            <th class="data-table__header-title--sortable">Beschrijving</th>
-                            <th class="data-table__header-title--sortable">Gebruik</th>
-                            <th class="data-table__header-title--sortable">Codelijst</th>
-                          </tr>
-                          </thead>
-
-                          <tbody class="supertype">
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/primaryTopic">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://xmlns.com/foaf/0.1/primaryTopic" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/primaryTopic" data-placement="right">
-                                
-                                primairOnderwerp
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
-                            <td>1 .. 1</td>
-                            <td property="rdfs:comment">Het primair onderwerp van dit profiel.</td>
-                            <td property="vann:usageNote">In de meeste gevallen zal het primairOnderwerp gelijk zijn aan de maker. Dit zou kunnen verschillen in de context van profielen voor bedrijven (buiten de scope van dit applicatieprofiel), waar een werknemer een profiel aanmaakt voor de organisatie.</td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-placement="right">
-                                
-                                notificatievoorkeur
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-placement="right">Notificatievoorkeur</a></td>
-                            <td>1 .. *</td>
-                            <td property="rdfs:comment">De notificatievoorkeur van de entiteit.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/maker">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://xmlns.com/foaf/0.1/maker" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/maker" data-placement="right">
-                                
-                                maker
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
-                            <td>1 .. 1</td>
-                            <td property="rdfs:comment">De Agent die het profiel heeft gecre&#235;erd.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
-                          </tbody>
-                        </table>
-                        
-                    </div>                   
-                    <div class="example">
-                        <span>Voorbeeld JSON-LD:</span>
-                        <div style="background:#efefef">
-                          <pre class="prettyprint">
-"@id": "https://data.vlaanderen.be/id/persoonlijkprofieldocument/1256398734",
-"@type": "PersoonlijkProfielDocument",
-"primairOnderwerp": {
-  "@id": "https://data.vlaanderen.be/id/geregistreerdepersoon/00000014182",
-  "@type": "GeregistreerdPersoon"
-},
-"notificatievoorkeur": {
-  "@type": "Notificatievoorkeur",
-  "notificatiekanaal": "Email",
-  "permissie": "Toegelaten"
-},
-"maker": {
-  "@id": "https://data.vlaanderen.be/id/geregistreerdepersoon/00000014182",
-  "@type": "GeregistreerdPersoon"
-}
-</pre>
-                      </div>
-                    </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      
-      <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="PubliekeOrganisatie"><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">PubliekeOrganisatie</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector,ongeacht het bestuursniveau waarop dat kader van kracht is.</p></div>
                     <div><p></p></div>
                     
                     
                     
-                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: voorkeursnaam, isVerantwoordelijkVoor, heeftMerk, notificatievoorkeur.</p></div>
+                    <div><p>Voor deze entiteit zijn de volgende attributen gedefinieerd: voorkeursnaam, isVerantwoordelijkVoor, heeftMerk.</p></div>
                     </div>
                     <div class="u-table-overflow">
                         <table class="data-table">
@@ -1159,27 +854,6 @@ die toelaat de Organisatie te contacteren.</td>
                             <td></td>
                           </tr>
                           
-                          
-                          
-                          
-                          <tr typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur">
-                            <td>
-                            <code property="rdfs:label">
-                                <a href="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur" data-placement="right">
-                                
-                                notificatievoorkeur
-                                
-                                </a>
-                            </code>
-                            </td>
-                            <td><a href="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur" data-placement="right">Notificatievoorkeur</a></td>
-                            <td>1 .. *</td>
-                            <td property="rdfs:comment">De notificatievoorkeur van de entiteit.</td>
-                            <td property="vann:usageNote"></td>
-                            <td></td>
-                          </tr>
-                          
-                          
                           </tbody>
                         </table>
                         
@@ -1202,26 +876,13 @@ die toelaat de Organisatie te contacteren.</td>
     "@type": "PubliekeDienstverlening",
     "naam": "Strategische ecologiesteun voor ondernemingen (STRES)"
   }
-],
-"notificatievoorkeur": {
-  "@type": "Notificatievoorkeur",
-  "notificatiekanaal": "Email",
-  "permissie": "Toegelaten"
-}
+]
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2" id="Status"><a href="http://data.vlaanderen.be/ns/notificatie#Status" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#Status" data-placement="right">Status</a></h2>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>De Status van het Notificatiebericht voor een bepaalde bestemmeling.</p></div>
                     <div><p></p></div>
                     
@@ -1379,27 +1040,16 @@ die toelaat de Organisatie te contacteren.</td>
 "bestemmeling": "https://data.vlaanderen.be/id/geregistreerdepersoon/1234"
 </pre>
                       </div>
-                    </div>
-              </div>
-            </div>
-          </div>
       </div>
       
 
       
-      <div>
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h2 class="h2">Datatypes</h2>
-          </div>
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h3 class="h3" id="ContactInfo"><a href="http://schema.org/ContactPoint" data-toggle="tooltip" data-content="http://schema.org/ContactPoint" data-placement="right">ContactInfo</a></h3>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>TODO</p></div>
                     <div><p></p></div>
                     
@@ -1600,18 +1250,11 @@ die toelaat de Organisatie te contacteren.</td>
 "telefoon": "+32 9 266 78 90"
 </pre>
                       </div>
-                    </div>                   
-              </div>
-            </div>
-          </div>
+
       </div>
       
       <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h3 class="h3" id="SleutelWaardePaar"><a href="http://data.vlaanderen.be/ns/notificatie#SleutelWaardePaar" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/notificatie#SleutelWaardePaar" data-placement="right">SleutelWaardePaar</a></h3>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
                     <div><p>Een open data structuur dat uitbreiding toelaat aan de hand van een sleutel en een waarde.</p></div>
                     <div><p></p></div>
                     
@@ -1690,21 +1333,13 @@ die toelaat de Organisatie te contacteren.</td>
 }
 </pre>
                       </div>
-                    </div>                   
-              </div>
-            </div>
-          </div>
       </div>
       
       </div>
       
-    </div>
         <div class="region region--no-space-top">
-          <div class="layout layout--normal">
             <h3 class="h2" id="Context"><span class="secno">4.</span> JSON-LD Context</h3>
-            <div class="grid">
-              <div class="col--9-12 col--1-1--s typography">
-                    <div class="region region--no-space-top">
+
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {
@@ -1712,9 +1347,7 @@ die toelaat de Organisatie te contacteren.</td>
   {
     "Status":"http://data.vlaanderen.be/ns/notificatie#Status",
     "Merk":"http://schema.org/Brand",
-    "Notificatievoorkeur":"http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur",
     "Agent":"http://purl.org/dc/terms/Agent",
-    "PersoonlijkProfielDocument":"http://xmlns.com/foaf/0.1/PersonalProfileDocument",
     "Notificatiebericht":"http://data.vlaanderen.be/ns/notificatie#Notificatiebericht",
     "GeregistreerdeOrganisatie":"http://www.w3.org/ns/regorg#RegisteredOrganization",
     "PubliekeOrganisatie":"http://data.europa.eu/m8g/PublicOrganisation",
@@ -1739,22 +1372,9 @@ die toelaat de Organisatie te contacteren.</td>
       "@type":"http://data.vlaanderen.be/ns/notificatie#Agent",
       "@container":"@set"
     },
-    "notificatievoorkeur":{
-      "@id":"http://data.vlaanderen.be/ns/notificatie#notificatievoorkeur",
-      "@type":"http://data.vlaanderen.be/ns/notificatie#Notificatievoorkeur",
-      "@container":"@set"
-    },
     "afzender":{
       "@id":"http://schema.org/sender",
       "@type":"http://schema.org/Brand"
-    },
-    "primairOnderwerp":{
-      "@id":"http://xmlns.com/foaf/0.1/primaryTopic",
-      "@type":"http://purl.org/dc/terms/Agent"
-    },
-    "maker":{
-      "@id":"http://xmlns.com/foaf/0.1/maker",
-      "@type":"http://purl.org/dc/terms/Agent"
     },
     "label":{
       "@id":"http://www.w3.org/2000/01/rdf-schema#label",
@@ -1774,7 +1394,7 @@ die toelaat de Organisatie te contacteren.</td>
     },
     "notificatiekanaal":{
       "@id":"http://data.vlaanderen.be/ns/notificatie#notificatiekanaal",
-      "@type":"",
+      "@type":"http://www.w3.org/2004/02/skos/core#Concept",
       "@container":"@set"
     },
     "datumGelezen":{
@@ -1793,17 +1413,9 @@ die toelaat de Organisatie te contacteren.</td>
       "@id":"http://data.vlaanderen.be/ns/organisatie#isTeBereikenOp",
       "@type":"http://data.vlaanderen.be/ns/notificatie#ContactInfo"
     },
-    "isGerelateerdAan":{
+    "isGerelateerdMet":{
       "@id":"http://purl.org/dc/terms/relation",
       "@type":"http://purl.org/vocab/cpsv#PublicService"
-    },
-    "frequentie":{
-      "@id":"http://data.vlaanderen.be/ns/notificatie#frequentie",
-      "@type":""
-    },
-    "permissie":{
-      "@id":"http://data.vlaanderen.be/ns/notificatie#permissie",
-      "@type":"http://data.vlaanderen.be/ns/notificatie#PermissieType"
     },
     "vervalt":{
       "@id":"http://schema.org/expires",
@@ -1831,9 +1443,7 @@ die toelaat de Organisatie te contacteren.</td>
       "@type":"http://www.w3.org/2001/XMLSchema#string"
     },
     "isVerantwoordelijkVoor":{
-      "@id":"http://data.vlaanderen.be/ns/notificatie#isVerantwoordelijkVoor",
-      "@type":"http://purl.org/vocab/cpsv#PublicService",
-      "@container":"@set"
+      "@reverse":"http://data.europa.eu/m8g/hasCompetentAuthority",
     },
     "aanschrijfvorm":{
       "@id":"http://ww.w3.org/2006/vcard/ns#honorific-prefix",
@@ -1872,11 +1482,37 @@ die toelaat de Organisatie te contacteren.</td>
 </pre>
                       </div>
                     </div>
-              </div>
-            </div>    
-          </div>
-      </div>
+
   </div>
+                    <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m" id="sideNav">
+                        <nav class="side-navigation js-sticky region" id="sideNav">
+                            <div class="side-navigation__content js-scrollspy">
+                                <div class="side-navigation__group">
+                                    <ul>
+                                        <li class="side-navigation__item">
+                                            <a href="#abstract">Abstract</a>
+                                        </li>                                                                              
+                                        <li class="side-navigation__item">
+                                            <a href="#license-and-liability">1. Licentie</a>
+                                        </li>                                       
+                                        <li class="side-navigation__item">
+                                            <a href="#conformance-statement">2. Conformiteit</a>
+                                        </li>                                       
+                                        <li class="side-navigation__item">
+                                            <a href="#overview">3. Overzicht</a>
+                                        </li>                                    
+                                        <li class="side-navigation__item">
+                                            <a href="#context">4. JSON-LD Context</a>
+                                        </li>                                                                    
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </nav>
+                    </div> 
+
+
+</div>
+
   <!-- End page content -->
 
 
