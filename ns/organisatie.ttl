@@ -1,0 +1,281 @@
+@prefix corevoc:  <http://data.europa.eu/m8g/> .
+@prefix org:     <https://www.w3.org/ns/org#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix as:      <https://www.w3.org/ns/activitystreams#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcmi:    <http://purl.org/dc/dcmitype/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+
+corevoc:FoundationEvent
+      rdfs:comment "Gebeurtenis waarbij een organisatie is opgericht."@nl ;
+      rdfs:label "Oprichting"@nl .
+
+corevoc:PublicOrganisation
+      rdfs:comment "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector,ongeacht het bestuursniveau waarop dat kader van kracht is."@nl ;
+      rdfs:label "Publieke Organisatie"@nl .
+
+<http://data.vlaanderen.be/ns/organisatie>
+      a       owl:Ontology ;
+      dcterms:issued "2017-03-31"^^xsd:date ;
+      dcterms:title "Organisatie"@nl ;
+      vann:preferredNamespaceUri
+              "http://data.vlaanderen.be/ns/organisatie" .
+
+<http://data.vlaanderen.be/ns/organisatie#Fusie>
+      a       owl:Class ;
+      rdfs:comment "Gebeurtenis waarbij twee organisaties samen een nieuwe organisatie vormen."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "Fusie"@nl ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
+
+<http://data.vlaanderen.be/ns/organisatie#Hoedanigheid>
+      a       owl:Class ;
+      rdfs:comment "Agent met een positie."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "Hoedanigheid"@nl ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#Post> .
+
+<http://data.vlaanderen.be/ns/organisatie#Splitsing>
+      a       owl:Class ;
+      rdfs:comment "Gebeurtenis waarbij uit één organisatie twee organisaties worden gevormd."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "Splitsing"@nl ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
+
+<http://data.vlaanderen.be/ns/organisatie#Stopzetting>
+      a       owl:Class ;
+      rdfs:comment "Gebeurtenis waarbij een organisatie is stopgezet."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "Stopzetting"@nl ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
+
+<http://data.vlaanderen.be/ns/organisatie#Vervanging>
+      a       owl:Class ;
+      rdfs:comment "Gebeurtenis waarbij een organisatie wordt vervangen door een andere."@nl ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "Vervanging"@nl ;
+      rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
+
+<http://data.vlaanderen.be/ns/organisatie#isTeBereikenOp>
+      a       rdf:Property ;
+      rdfs:comment "Informatie zoals email, telefoon die toelaat de hoedanigheid te contacteren."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/organisatie#Hoedanigheid> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "contactinfo"@nl .
+
+<http://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon. "@nl ;
+      rdfs:domain <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "rechtspersoonlijkheid"@nl ;
+      rdfs:range skos:Concept ;
+      rdfs:subPropertyOf <http://www.w3.org/ns/regorg#orgType> .
+
+<http://data.vlaanderen.be/ns/organisatie#rechtstoestand>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Status van de geregistreerde organisatie."@nl ;
+      rdfs:domain <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "rechtstoestand"@nl ;
+      rdfs:range skos:Concept ;
+      rdfs:subPropertyOf <http://www.w3.org/ns/regorg#orgStatus> .
+
+<http://data.vlaanderen.be/ns/organisatie#rechtsvorm>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Juridisch statuut van de geregistreerde organisatie."@nl ;
+      rdfs:domain <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "rechtsvorm"@nl ;
+      rdfs:range skos:Concept ;
+      rdfs:subPropertyOf <http://www.w3.org/ns/regorg#orgType> .
+
+<http://data.vlaanderen.be/ns/organisatie#redenStopzetting>
+      a       owl:ObjectProperty ;
+      rdfs:comment "Reden waarom de organisatie is stopgezet."@nl ;
+      rdfs:domain <http://data.vlaanderen.be/ns/organisatie#Stopzetting> ;
+      rdfs:isDefinedBy <http://data.vlaanderen.be/ns/organisatie> ;
+      rdfs:label "reden stopzetting"@nl ;
+      rdfs:range skos:Concept .
+
+dcterms:date
+      rdfs:comment "Datum waarop de gebeurtenis plaatsvond."@nl ;
+      rdfs:label "datum"@nl .
+
+dcterms:description
+      rdfs:comment "Beschrijving van de publieke organisatie."@nl ;
+      rdfs:label "beschrijving"@nl .
+
+dcterms:spatial
+      rdfs:comment "Administratief gebied dat de Publieke Organisatie dekt."@nl ;
+      rdfs:label "spatiaal"@nl .
+
+<http://schema.org/contactPoint>
+      rdfs:comment "Informatie zoals email, telefoon die toelaat de Organisatie te contacteren."@nl ;
+      rdfs:label "contactpunt"@nl .
+
+<http://schema.org/logo>
+      rdfs:comment "Verwijzing naar het logo vd publieke organisatie."@nl ;
+      rdfs:label "logo"@nl .
+
+skos:Concept
+      rdfs:comment "Toestand ve organisatie."@nl , "Type activiteit die door een organisatie wordt uitgeoefend."@nl , "Rangschikking van een organisatie in een classificatiesysteem."@nl , "Aard vd rechtspersoonlijkheid."@nl , "Soort organisatie."@nl , "Reden waarom een organisatie is stopgezet."@nl , "Juridisch statuut van een geregistreerde organisatie."@nl , "Status van een geregistreerde organisatie."@nl .
+
+skos:altLabel
+      rdfs:comment "Andere naam waaronder de organisatie bekend is."@nl ;
+      rdfs:label "alternatieve label"@nl .
+
+skos:prefLabel
+      rdfs:comment "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl ;
+      rdfs:label "voorkeurslabel"@nl .
+
+<http://www.w3.org/ns/org#ChangeEvent>
+      rdfs:comment "Gebeurtenis waardoor een organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering."@nl ;
+      rdfs:label "Veranderingsgebeurtenis"@nl .
+
+<http://www.w3.org/ns/org#FormalOrganization>
+      rdfs:comment "Een erkende organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten."@nl ;
+      rdfs:label "Formele Organisatie"@nl .
+
+<http://www.w3.org/ns/org#Membership>
+      rdfs:comment "Geeft de kenmerken weer vh lidmaatschap van een agent van een organisatie."@nl ;
+      rdfs:label "Lidmaatschap"@nl .
+
+<http://www.w3.org/ns/org#Organization>
+      rdfs:comment "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaanreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."@nl ;
+      rdfs:label "Organisatie"@nl .
+
+<http://www.w3.org/ns/org#OrganizationalCollaboration>
+      rdfs:comment "Samenwerking tussen twee of meer organisaties bv ihkv een project."@nl ;
+      rdfs:label "Organisationele Samenwerking"@nl .
+
+<http://www.w3.org/ns/org#OrganizationalUnit>
+      rdfs:comment "Een organisatie zoals een afdeling of dienst die deel uitmaakt van de grotere organisatie en zijn bestaansreden daaraan ontleent. Heeft geen juridische status op zich."@nl ;
+      rdfs:label "Organisationele Eenheid"@nl .
+
+<http://www.w3.org/ns/org#Post>
+      rdfs:comment "Functie binnen een organisatie, kan bestaan los vd persoon of personen die ze invult."@nl ;
+      rdfs:label "Functie"@nl .
+
+<http://www.w3.org/ns/org#Role>
+      rdfs:comment "Rol die een agent kan vervullen binnen een organisatie."@nl ;
+      rdfs:label "Rol"@nl .
+
+<http://www.w3.org/ns/org#Site>
+      rdfs:comment "Een kantoor of ander pand waar een organisatie gevestigd is. Organisaties kunnen over meerdere vestigingen verspreid zijn en vestigingen kunnen op meerdere locaties slaan."@nl ;
+      rdfs:label "Vestiging"@nl .
+
+<http://www.w3.org/ns/org#changedBy>
+      rdfs:comment "Verwijst naar het veranderingsmoment dat deze organisatie heeft veranderd."@nl ;
+      rdfs:label "veranderd door"@nl .
+
+<http://www.w3.org/ns/org#classification>
+      rdfs:comment "Rangschikking van de organisatie in een classificatiesysteem."@nl ;
+      rdfs:label "classificatie"@nl .
+
+<http://www.w3.org/ns/org#hasPost>
+      rdfs:comment "Verwijst naar een positie in de organisatie."@nl ;
+      rdfs:label "heeft positie"@nl .
+
+<http://www.w3.org/ns/org#hasPrimarySite>
+      rdfs:comment "Verwijst naar de belangrijkste vestiging van de organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de vestiging waarop de organisatie standaard kan worden gecontacteerd."@nl ;
+      rdfs:label "heeft primaire vestiging"@nl .
+
+<http://www.w3.org/ns/org#hasRegisteredSite>
+      rdfs:comment "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht."@nl ;
+      rdfs:label "heeft geregistreerde vestiging"@nl .
+
+<http://www.w3.org/ns/org#hasSite>
+      rdfs:comment "Verwijst naar een plek waar de organisatie op een of andere manier, desnoods indirect, aanwezig is."@nl ;
+      rdfs:label "heeft vestiging"@nl .
+
+<http://www.w3.org/ns/org#hasSubOrganization>
+      rdfs:comment "Organisatie die dochter of onderdeel is van de organisatie."@nl ;
+      rdfs:label "heeft suborganisatie"@nl .
+
+<http://www.w3.org/ns/org#hasUnit>
+      rdfs:comment "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl ;
+      rdfs:label "heeft eenheid"@nl .
+
+<http://www.w3.org/ns/org#linkedTo>
+      rdfs:comment "Niet nader bepaalde relatie met een andere organisatie."@nl ;
+      rdfs:label "gelinkt met"@nl .
+
+<http://www.w3.org/ns/org#memberDuring>
+      rdfs:comment "Periode waarin de agent lid was vd organisatie."@nl ;
+      rdfs:label "lid gedurende"@nl .
+
+<http://www.w3.org/ns/org#originalOrganization>
+      rdfs:comment "Organisatie voor deze de verandering onderging."@nl ;
+      rdfs:label "originele organisatie"@nl .
+
+<http://www.w3.org/ns/org#postIn>
+      rdfs:comment "Organisatie waar de positie bestaat."@nl ;
+      rdfs:label "positie bij"@nl .
+
+<http://www.w3.org/ns/org#purpose>
+      rdfs:comment "Bestaansreden vd organisatie."@nl ;
+      rdfs:label "doel"@nl .
+
+<http://www.w3.org/ns/org#reportsTo>
+      rdfs:comment "Verwijst naar de positie waaraan een positie verantwoording aflegt."@nl ;
+      rdfs:label "rapporteert aan"@nl .
+
+<http://www.w3.org/ns/org#resultedFrom>
+      rdfs:comment "Verwijst naar het veranderingsmoment dat tot de huidige organisatie heeft geleid."@nl ;
+      rdfs:label "geresulteerd van"@nl .
+
+<http://www.w3.org/ns/org#resultingOrganization>
+      rdfs:comment "Organisatie die uit de verandering voortkwam."@nl ;
+      rdfs:label "resulterende organisatie"@nl .
+
+<http://www.w3.org/ns/org#role>
+      rdfs:comment "Geeft de aard weer vd functie."@nl , "Rol die de agent vervult als lid van de organisatie."@nl ;
+      rdfs:label "rol"@nl .
+
+<http://www.w3.org/ns/org#siteAddress>
+      rdfs:comment "Adres vd vestiging."@nl ;
+      rdfs:label "vestigingsadres"@nl .
+
+<http://www.w3.org/ns/org#subOrganizationOf>
+      rdfs:comment "Organisatie die deze organisatie omvat."@nl ;
+      rdfs:label "suborganisatie van"@nl .
+
+<http://www.w3.org/ns/org#unitOf>
+      rdfs:comment "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl ;
+      rdfs:label "eenheid van"@nl .
+
+<http://www.w3.org/ns/regorg#RegisteredOrganization>
+      rdfs:comment "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een formele organisatie waarbij dit statuut ook op een andere manier verkregen kan zijn."@nl ;
+      rdfs:label "Geregistreerde Organisatie"@nl .
+
+<http://www.w3.org/ns/regorg#legalName>
+      rdfs:comment "Wettelijk geregistreerde naam vd organisatie."@nl ;
+      rdfs:label "wettelijke naam"@nl .
+
+<http://www.w3.org/ns/regorg#orgActivity>
+      rdfs:comment "Type activiteit die door de organisatie wordt uitgeoefend."@nl ;
+      rdfs:label "organisatieactiviteit"@nl .
+
+<http://www.w3.org/ns/regorg#orgStatus>
+      rdfs:comment "Toestand vd organisatie."@nl ;
+      rdfs:label "organisatiestatus"@nl .
+
+<http://www.w3.org/ns/regorg#orgType>
+      rdfs:comment "Soort organisatie."@nl ;
+      rdfs:label "organisatietype"@nl .
+
+<http://www.w3.org/ns/regorg#registration>
+      rdfs:comment "Identificator dat de organisatie verkreeg bij registratie."@nl ;
+      rdfs:label "organisatieregistratie"@nl .
+
+<http://xmlns.com/foaf/0.1/homepage>
+      rdfs:comment "Adres vd homepage van de website vd Publieke Organisatie."@nl ;
+      rdfs:label "Homepage"@nl .
