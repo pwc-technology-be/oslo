@@ -248,10 +248,15 @@
           
             <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status van dit document</h2>
             
-            <p><em>Deze sectie beschrijft de status van dit document op het moment van publicatie. Het kan zijn dat er ondertussen al nieuwere versies zijn uitgebracht.</em></p>
             <p>
               Dit applicatieprofiel dient om het specifieke gebruik van de entitieten relevant voor de beschreven applicatie te verduidelijken.
             </p>
+            <p>
+            Op 31/03/2017 werd dit document als Kandidaat-standaard gepubliceerd door de werkgroep semantiek. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze Kandidaat-standaard. Indien de evaluatie positief beoordeeld wordt door het stuurorgaan Vlaams Informatie- en ICT-beleid op basis van een aantal referentie implementaties en het behandelen van eventuele feedback wordt dit document gepromoot tot Standaard in het beschreven domein.
+            </p>
+            <br />  
+                                                            
+            <p>Feedback op deze specificatie kan gegeven worden via de <a href="mailto:oslo@kb.vlaanderen.be">mailing lijst</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p> 
             
           </section>
         </div>
@@ -271,8 +276,24 @@
             <div class="col--9-12 col--1-1--s typography">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformiteit</h2>
               
-              <p>De conformiteit voor applicatieprofielen is <a href="../../begeleidend/applicatieprofielen/conformiteit">hier</a> te vinden.</p>
-              
+  <p>Een applicatieprofiel is een specificatie voor gegevensuitwisseling dat bijkomende beperkingen introduceert voor het toepassen van vocabularia.
+        Dergelijke bijkomende beperkingen kunnen de volgende elementen bevatten:</p>
+        <p>
+        <ul>
+        <li>verfijning van de terminologie (klassen en eigenschappen) consistent met de semantiek uit de betreffende specificaties met een welbepaald gebruik als doel;</li>
+        <li>externe terminologie (klassen en eigenschappen) gebruikt voor nieuwe/extra termen die niet in de bestaande vocabularia voorkomen.</li>
+        </ul>
+        </p>
+        <p>Om conform te zijn met dit applicatieprofiel, geldt voor een implementatie dat ze:</p>
+        <p>
+        <ul>
+        <li>MOET Voor elke klasse steeds de eigenschappen bevatten die als minimum kardinaliteit 1 hebben.</li>
+        <li>MAG NIET meer dan 1 instantie bevatten van eigenschappen die 1 als maximum kardinaliteit hebben.</li>
+        <li>MAG yerminologie (klassen en eigenschappen) gebruiken op een manier die consistent is met haar semantiek (definitie, gebruik, domein en bereik).</li>
+        <li>MAG NIET terminologie van andere gecontroleerde vocabularia gebruiken dan diegene die gedefinieerd wordt in dit applicatieprofiel.</li>
+        <li>MAG uitgebreid worden met klassen en eigenschappen van andere datamodellen (vocabularia) die niet overlappen met terminologie uit dit applicatieprofiel.</li>
+        </ul>
+        </p>              
             </div>
           </div>
         </div>
@@ -295,7 +316,7 @@
                   <a href="#Gemeentenaam">Gemeentenaam</a> |
                   <a href="#Postinfo">Postinfo</a> |
                   <a href="#Straatnaam">Straatnaam</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Agent">Agent</a> |
                 </p>
               </div>
               
@@ -308,7 +329,7 @@
                   <a href="#Adreslocator">Adreslocator</a> |
                   <a href="#Locatieaanduiding">Locatieaanduiding</a> |
                   <a href="#Locatienaam">Locatienaam</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#GeografischeNaam">GeografischeNaam</a> |
                 </p>
               </div>
               
@@ -777,7 +798,7 @@
                   <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                     <a href="#Straatnaam%3Ahomoniem%20toevoeging">homoniem toevoeging</a>, 
                     <a href="#Straatnaam%3Astatus">status</a>, 
-                    <a href="#Straatnaam%3ATODO">TODO</a>, 
+                    <a href="#Straatnaam%3Astraatnaam">straatnaam</a>, 
                     <a href="#Straatnaam%3Atoegeschreven%20aan">toegeschreven aan</a>.</dd>
                   
                 </dl>
@@ -826,11 +847,11 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="Straatnaam%3ATODO" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
+                    <tr id="Straatnaam%straatnaam" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
                       <td>
                         <code property="rdfs:label">
                           <a href="https://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="https://www.w3.org/2000/01/rdf-schema#label" data-placement="right">
-                          TODO</a>
+                          straatnaam</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">GeografischeNaam</a></td>
@@ -865,12 +886,12 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
+                  <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
                   
                   <dt>Eigenschappen</dt>
                   
@@ -1160,7 +1181,7 @@
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
                     <a href="#Adreslocator%3Aaanduiding">aanduiding</a>, 
                     <a href="#Adreslocator%3Aniveau">niveau</a>, 
-                    <a href="#Adreslocator%3ATODO">TODO</a>.</dd>
+                    <a href="#Adreslocator%3Anaam">naam</a>.</dd>
                   
                 </dl>
               </div>
@@ -1206,10 +1227,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="Adreslocator%3ATODO" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
+                    <tr id="Adreslocator%3Anaam" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
                       <td>
                         <code property="rdfs:label">
-                          <a href="https://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="https://www.w3.org/2000/01/rdf-schema#label" data-placement="right">TODO</a>
+                          <a href="https://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="https://www.w3.org/2000/01/rdf-schema#label" data-placement="right">naam</a>
                         </code>
                       </td>
                       <td><a href="http://data.vlaanderen.be/ns/adres#Locatienaam" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/adres#Locatienaam" data-placement="right">Locatienaam</a></td>
@@ -1312,7 +1333,7 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#Locatienaam%3ATODO">TODO</a>, 
+                    <a href="#Locatienaam%3Anaam">naam</a>, 
                     <a href="#Locatienaam%3Atype">type</a>.</dd>
                   
                 </dl>
@@ -1333,10 +1354,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="Locatienaam%3ATODO" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
+                    <tr id="Locatienaam%3Anaam" typeof="rdfs:Property" resource="https://www.w3.org/2000/01/rdf-schema#label">
                       <td>
                         <code property="rdfs:label">
-                          <a href="https://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="https://www.w3.org/2000/01/rdf-schema#label" data-placement="right">TODO</a>
+                          <a href="https://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="https://www.w3.org/2000/01/rdf-schema#label" data-placement="right">naam</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">GeografischeNaam</a></td>
@@ -1370,12 +1391,12 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="GeografischeNaam"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">GeografischeNaam</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
+                  <dt>Beschrijving</dt><dd>Benaming toegekend aan of gebruikt voor een geografisch object.</dd>
                   
                   <dt>Eigenschappen</dt>
                   
@@ -1397,6 +1418,8 @@
             <div class="grid">
               <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
+                    <p>Een gehoste versie van de JSON-LD Context is beschikbaar via <a href="http://data.vlaanderen.be/context/adres.jsonld">http://data.vlaanderen.be/context/adres.jsonld</a></p>
+
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {

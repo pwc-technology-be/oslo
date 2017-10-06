@@ -312,10 +312,15 @@
           
             <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status van dit document</h2>
             
-            <p><em>Deze sectie beschrijft de status van dit document op het moment van publicatie. Het kan zijn dat er ondertussen al nieuwere versies zijn uitgebracht.</em></p>
             <p>
               Dit applicatieprofiel dient om het specifieke gebruik van de entitieten relevant voor de beschreven applicatie te verduidelijken.
             </p>
+            <p>
+            Op 31/03/2017 werd dit document als Kandidaat-standaard gepubliceerd door de werkgroep semantiek. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze Kandidaat-standaard. Indien de evaluatie positief beoordeeld wordt door het stuurorgaan Vlaams Informatie- en ICT-beleid op basis van een aantal referentie implementaties en het behandelen van eventuele feedback wordt dit document gepromoot tot Standaard in het beschreven domein.
+            </p>
+            <br />   
+                                                            
+            <p>Feedback op deze specificatie kan gegeven worden via de <a href="mailto:oslo@kb.vlaanderen.be">mailing lijst</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>  
             
           </section>
         </div>
@@ -335,7 +340,24 @@
             <div class="col--9-12 col--1-1--s typography">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformiteit</h2>
               
-              <p>De conformiteit voor applicatieprofielen is <a href="../../begeleidend/applicatieprofielen/conformiteit">hier</a> te vinden.</p>
+  <p>Een applicatieprofiel is een specificatie voor gegevensuitwisseling dat bijkomende beperkingen introduceert voor het toepassen van vocabularia.
+        Dergelijke bijkomende beperkingen kunnen de volgende elementen bevatten:</p>
+        <p>
+        <ul>
+        <li>verfijning van de terminologie (klassen en eigenschappen) consistent met de semantiek uit de betreffende specificaties met een welbepaald gebruik als doel;</li>
+        <li>externe terminologie (klassen en eigenschappen) gebruikt voor nieuwe/extra termen die niet in de bestaande vocabularia voorkomen.</li>
+        </ul>
+        </p>
+        <p>Om conform te zijn met dit applicatieprofiel, geldt voor een implementatie dat ze:</p>
+        <p>
+        <ul>
+        <li>MOET Voor elke klasse steeds de eigenschappen bevatten die als minimum kardinaliteit 1 hebben.</li>
+        <li>MAG NIET meer dan 1 instantie bevatten van eigenschappen die 1 als maximum kardinaliteit hebben.</li>
+        <li>MAG yerminologie (klassen en eigenschappen) gebruiken op een manier die consistent is met haar semantiek (definitie, gebruik, domein en bereik).</li>
+        <li>MAG NIET terminologie van andere gecontroleerde vocabularia gebruiken dan diegene die gedefinieerd wordt in dit applicatieprofiel.</li>
+        <li>MAG uitgebreid worden met klassen en eigenschappen van andere datamodellen (vocabularia) die niet overlappen met terminologie uit dit applicatieprofiel.</li>
+        </ul>
+        </p>              
               
             </div>
           </div>
@@ -366,8 +388,7 @@
                   <a href="#Publieke Dienstverlening">Publieke Dienstverlening</a> |
                   <a href="#Publieke Organisatie">Publieke Organisatie</a> |
                   <a href="#Richtlijn">Richtlijn</a> |
-                  <a href="#TODO">TODO</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Agent">Agent</a> |
                 </p>
               </div>
               
@@ -377,8 +398,8 @@
                   <br />
                   |
                   <a href="#Contactpunt">Contactpunt</a> |
-                  <a href="#kost">kost</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Kost">Kost</a> |
+                  <a href="#OpeningsurenSpecificatie">OpeningsurenSpecificatie</a> |
                 </p>
               </div>
               
@@ -1915,7 +1936,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -1927,9 +1948,9 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3Aspeelt%20rol">speelt rol</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>.</dd>
+                    <a href="#Agent%3Aspeelt%20rol">speelt rol</a>, 
+                    <a href="#Agent%3Aadres">adres</a>, 
+                    <a href="#Agent%3Anaam">naam</a>.</dd>
                   
                 </dl>
               </div>
@@ -1949,7 +1970,7 @@
       
                   <tbody class="supertype">
                   
-                    <tr id="TODO%3Aspeelt%20rol" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/playsRole">
+                    <tr id="Agent%3Aspeelt%20rol" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/playsRole">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://data.europa.eu/m8g/playsRole" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/playsRole" data-placement="right">
@@ -1963,11 +1984,11 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasAddress">
+                    <tr id="Agent%3Aadres" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasAddress">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://data.europa.eu/m8g/hasAddress" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasAddress" data-placement="right">
-                          TODO</a>
+                          adres</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/locn#Address" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#Address" data-placement="right">Adresvoorstelling</a></td>
@@ -1977,11 +1998,11 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                    <tr id="Agent%3Anaam" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
-                          TODO</a>
+                          naam</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
@@ -2000,28 +2021,6 @@
         </div>
       </div>
       
-      <div class="region region--no-space-top">
-        <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">TODO</a></h3>
-          <div class="grid">
-            <div class="col--9-12 col--1-1--s typography">
-              <div class="region region--no-space-top">
-                <dl>
-                  <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
-                  
-                  <dt>Gebruik</dt><dd> </dd>
-                  
-                  <dt>Eigenschappen</dt>
-                  
-                  <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-                  
-                </dl>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
       
       
       
@@ -2313,7 +2312,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://schema.org/OpeningHoursSpecification" data-toggle="tooltip" data-content="http://schema.org/OpeningHoursSpecification" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="OpeningsurenSpecificatie"><a href="http://schema.org/OpeningHoursSpecification" data-toggle="tooltip" data-content="http://schema.org/OpeningHoursSpecification" data-placement="right">OpeningsurenSpecificatie</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -2325,11 +2324,11 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>.</dd>
+                    <a href="#OpeningsurenSpecificatie%3AdagVanDeWeek">dagVanDeWeek</a>, 
+                    <a href="#OpeningsurenSpecificatie%3AgeldigTot">geldigTot</a>, 
+                    <a href="#OpeningsurenSpecificatie%3AgeldigVan">geldigVan</a>, 
+                    <a href="#OpeningsurenSpecificatie%3Agesloten">gesloten</a>, 
+                    <a href="#OpeningsurenSpecificatie%3Aopen">open</a>.</dd>
                   
                 </dl>
               </div>
@@ -2349,10 +2348,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://schema.org/dayOfWeek">
+                    <tr id="OpeningsurenSpecificatie%3AdagVanDeWeek" typeof="rdfs:Property" resource="http://schema.org/dayOfWeek">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://schema.org/dayOfWeek" data-toggle="tooltip" data-content="http://schema.org/dayOfWeek" data-placement="right">TODO</a>
+                          <a href="http://schema.org/dayOfWeek" data-toggle="tooltip" data-content="http://schema.org/dayOfWeek" data-placement="right">dagVanDeWeek</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">URI</a></td>
@@ -2362,10 +2361,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://schema.org/validThrough">
+                    <tr id="OpeningsurenSpecificatie%3AgeldigTot" typeof="rdfs:Property" resource="http://schema.org/validThrough">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://schema.org/validThrough" data-toggle="tooltip" data-content="http://schema.org/validThrough" data-placement="right">TODO</a>
+                          <a href="http://schema.org/validThrough" data-toggle="tooltip" data-content="http://schema.org/validThrough" data-placement="right">geldigTot</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
@@ -2375,10 +2374,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://schema.org/validFrom">
+                    <tr id="OpeningsurenSpecificatie%3AgeldigVan" typeof="rdfs:Property" resource="http://schema.org/validFrom">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://schema.org/validFrom" data-toggle="tooltip" data-content="http://schema.org/validFrom" data-placement="right">TODO</a>
+                          <a href="http://schema.org/validFrom" data-toggle="tooltip" data-content="http://schema.org/validFrom" data-placement="right">geldigVan</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
@@ -2388,10 +2387,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://schema.org/closes">
+                    <tr id="OpeningsurenSpecificatie%3Agesloten" typeof="rdfs:Property" resource="http://schema.org/closes">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://schema.org/closes" data-toggle="tooltip" data-content="http://schema.org/closes" data-placement="right">TODO</a>
+                          <a href="http://schema.org/closes" data-toggle="tooltip" data-content="http://schema.org/closes" data-placement="right">gesloten</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#time" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#time" data-placement="right">Time</a></td>
@@ -2401,10 +2400,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://schema.org/opens">
+                    <tr id="OpeningsurenSpecificatie%3Aopen" typeof="rdfs:Property" resource="http://schema.org/opens">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://schema.org/opens" data-toggle="tooltip" data-content="http://schema.org/opens" data-placement="right">TODO</a>
+                          <a href="http://schema.org/opens" data-toggle="tooltip" data-content="http://schema.org/opens" data-placement="right">open</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#time" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#time" data-placement="right">Time</a></td>
@@ -2435,6 +2434,7 @@
             <div class="grid">
               <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
+                        <p>Een gehoste versie van de JSON-LD Context is beschikbaar via <a href="http://data.vlaanderen.be/context/dienst.jsonld">http://data.vlaanderen.be/context/dienst.jsonld</a></p>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {

@@ -319,10 +319,15 @@
           
             <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status van dit document</h2>
             
-            <p><em>Deze sectie beschrijft de status van dit document op het moment van publicatie. Het kan zijn dat er ondertussen al nieuwere versies zijn uitgebracht.</em></p>
             <p>
               Dit applicatieprofiel dient om het specifieke gebruik van de entitieten relevant voor de beschreven applicatie te verduidelijken.
             </p>
+            <p>
+            Op 31/03/2017 werd dit document als Kandidaat-standaard gepubliceerd door de werkgroep semantiek. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze Kandidaat-standaard. Indien de evaluatie positief beoordeeld wordt door het stuurorgaan Vlaams Informatie- en ICT-beleid op basis van een aantal referentie implementaties en het behandelen van eventuele feedback wordt dit document gepromoot tot Standaard in het beschreven domein.
+            </p>
+            <br />   
+                                                            
+            <p>Feedback op deze specificatie kan gegeven worden via de <a href="mailto:oslo@kb.vlaanderen.be">mailing lijst</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>   
             
           </section>
         </div>
@@ -342,8 +347,24 @@
             <div class="col--9-12 col--1-1--s typography">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformiteit</h2>
               
-              <p>De conformiteit voor applicatieprofielen is <a href="../../begeleidend/applicatieprofielen/conformiteit">hier</a> te vinden.</p>
-              
+  <p>Een applicatieprofiel is een specificatie voor gegevensuitwisseling dat bijkomende beperkingen introduceert voor het toepassen van vocabularia.
+        Dergelijke bijkomende beperkingen kunnen de volgende elementen bevatten:</p>
+        <p>
+        <ul>
+        <li>verfijning van de terminologie (klassen en eigenschappen) consistent met de semantiek uit de betreffende specificaties met een welbepaald gebruik als doel;</li>
+        <li>externe terminologie (klassen en eigenschappen) gebruikt voor nieuwe/extra termen die niet in de bestaande vocabularia voorkomen.</li>
+        </ul>
+        </p>
+        <p>Om conform te zijn met dit applicatieprofiel, geldt voor een implementatie dat ze:</p>
+        <p>
+        <ul>
+        <li>MOET Voor elke klasse steeds de eigenschappen bevatten die als minimum kardinaliteit 1 hebben.</li>
+        <li>MAG NIET meer dan 1 instantie bevatten van eigenschappen die 1 als maximum kardinaliteit hebben.</li>
+        <li>MAG yerminologie (klassen en eigenschappen) gebruiken op een manier die consistent is met haar semantiek (definitie, gebruik, domein en bereik).</li>
+        <li>MAG NIET terminologie van andere gecontroleerde vocabularia gebruiken dan diegene die gedefinieerd wordt in dit applicatieprofiel.</li>
+        <li>MAG uitgebreid worden met klassen en eigenschappen van andere datamodellen (vocabularia) die niet overlappen met terminologie uit dit applicatieprofiel.</li>
+        </ul>
+        </p>               
             </div>
           </div>
         </div>
@@ -376,7 +397,7 @@
                   <a href="#Publieke Organisatie">Publieke Organisatie</a> |
                   <a href="#Splitsing">Splitsing</a> |
                   <a href="#Stopzetting">Stopzetting</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Agent">Agent</a> |
                   <a href="#Veranderingsgebeurtenis">Veranderingsgebeurtenis</a> |
                   <a href="#Vervanging">Vervanging</a> |
                   <a href="#Vestiging">Vestiging</a> |
@@ -417,7 +438,7 @@
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
+                  <dt>Beschrijving</dt><dd>Het niveau waarnaar de locator verwijst.</dd>
                   
                   <dt>Eigenschappen</dt>
                   
@@ -438,7 +459,7 @@
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
+                  <dt>Beschrijving</dt><dd>Geheel van formele documenten dat regels, rechten, plichten ten aanzien van burgers, overheden, bedrijven etc beschrijft. </dd>
                   
                   <dt>Eigenschappen</dt>
                   
@@ -1532,7 +1553,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -1544,12 +1565,12 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3Aheeft">heeft</a>, 
-                    <a href="#TODO%3Aheeft%20geregistreerde%20organisatie">heeft geregistreerde organisatie</a>, 
-                    <a href="#TODO%3Ahoofd%20van">hoofd van</a>, 
-                    <a href="#TODO%3Ahoudt">houdt</a>, 
-                    <a href="#TODO%3Alid%20van">lid van</a>, 
-                    <a href="#TODO%3Arapporteert%20aan">rapporteert aan</a>.</dd>
+                    <a href="#Agent%3Aheeft">heeft</a>, 
+                    <a href="#Agent%3Aheeft%20geregistreerde%20organisatie">heeft geregistreerde organisatie</a>, 
+                    <a href="#TAgent%3Ahoofd%20van">hoofd van</a>, 
+                    <a href="#Agent%3Ahoudt">houdt</a>, 
+                    <a href="#Agent%3Alid%20van">lid van</a>, 
+                    <a href="#Agent%3Arapporteert%20aan">rapporteert aan</a>.</dd>
                   
                 </dl>
               </div>
@@ -1569,7 +1590,7 @@
       
                   <tbody class="supertype">
                   
-                    <tr id="TODO%3Aheeft" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasMembership">
+                    <tr id="Agent%3Aheeft" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasMembership">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/org#hasMembership" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasMembership" data-placement="right">
@@ -1583,7 +1604,7 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3Aheeft%20geregistreerde%20organisatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/regorg#hasRegisteredOrganization">
+                    <tr id="Agent%3Aheeft%20geregistreerde%20organisatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/regorg#hasRegisteredOrganization">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/regorg#hasRegisteredOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/regorg#hasRegisteredOrganization" data-placement="right">
@@ -1597,7 +1618,7 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3Ahoofd%20van" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#headOf">
+                    <tr id="Agent%3Ahoofd%20van" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#headOf">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/org#headOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#headOf" data-placement="right">
@@ -1611,7 +1632,7 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3Ahoudt" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#holds">
+                    <tr id="Agent%3Ahoudt" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#holds">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/org#holds" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#holds" data-placement="right">
@@ -1625,7 +1646,7 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3Alid%20van" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#memberOf">
+                    <tr id="Agent%3Alid%20van" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#memberOf">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/org#memberOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#memberOf" data-placement="right">
@@ -1639,7 +1660,7 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="TODO%3Arapporteert%20aan" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#reportsTo">
+                    <tr id="Agent%3Arapporteert%20aan" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#reportsTo">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/org#reportsTo" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#reportsTo" data-placement="right">
@@ -2048,6 +2069,7 @@
             <div class="grid">
               <div class="col--9-12 col--1-1--s typography">
                     <div class="region region--no-space-top">
+                        <p>Een gehoste versie van de JSON-LD Context is beschikbaar via <a href="http://data.vlaanderen.be/context/organisatie.jsonld">http://data.vlaanderen.be/context/organisatie.jsonld</a></p>
                       <div style="background:#efefef">
                         <pre class="prettyprint">
 {
