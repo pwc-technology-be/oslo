@@ -321,7 +321,12 @@
             <p>
               Dit applicatieprofiel dient om het specifieke gebruik van de entitieten relevant voor de beschreven applicatie te verduidelijken.
             </p>
-            
+            <p>
+            Op 31/03/2017 werd dit document als Kandidaat-standaard gepubliceerd door de werkgroep semantiek. Vanaf deze datum startte een 6 maanden durende evaluatieperiode van deze Kandidaat-standaard. Indien de evaluatie positief beoordeeld wordt door het stuurorgaan Vlaams Informatie- en ICT-beleid op basis van een aantal referentie implementaties en het behandelen van eventuele feedback wordt dit document gepromoot tot Standaard in het beschreven domein.
+            </p>
+            <br />   
+                                                            
+            <p>Feedback op deze specificatie kan gegeven worden via de <a href="mailto:oslo@kb.vlaanderen.be">mailing lijst</a> of als een topic in onze <a href="https://github.com/Informatievlaanderen/OSLO-Public-Discussion">publieke reviewdiscussielijst</a>.</p>            
           </section>
         </div>
       </div>
@@ -365,7 +370,7 @@
                   <a href="#Organisatie">Organisatie</a> |
                   <a href="#Persoon">Persoon</a> |
                   <a href="#Resource">Resource</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Agent">Agent</a> |
                 </p>
               </div>
               
@@ -383,10 +388,10 @@
                   <a href="#Identificator">Identificator</a> |
                   <a href="#Punt">Punt</a> |
                   <a href="#TijdsInterval">TijdsInterval</a> |
-                  <a href="#TODO">TODO</a> |
-                  <a href="#TODO">TODO</a> |
-                  <a href="#TODO">TODO</a> |
-                  <a href="#TODO">TODO</a> |
+                  <a href="#Invalidatie">Invalidatie</a> |
+                  <a href="#Generatie">Generatie</a> |
+                  <a href="#GetypeerdeString">GetypeerdeString</a> |
+                  <a href="#GeografischeNaam">GeografischeNaam</a> |
                 </p>
               </div>
               
@@ -422,8 +427,8 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#Document%3ATODO">TODO</a>, 
-                    <a href="#Document%3ATODO">TODO</a>.</dd>
+                    <a href="#Document%3Ageneratie">generatie</a>, 
+                    <a href="#Document%3Ainvalidatie">invalidatie</a>.</dd>
                   
                 </dl>
               </div>
@@ -443,11 +448,11 @@
       
                   <tbody class="supertype">
                   
-                    <tr id="Document%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedGeneration">
+                    <tr id="Document%3Ageneratie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedGeneration">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/prov#qualifiedGeneration" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#qualifiedGeneration" data-placement="right">
-                          TODO</a>
+                          generatie</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/prov#Generation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Generation" data-placement="right">Generatie</a></td>
@@ -457,11 +462,11 @@
                       <td></td>
                     </tr>
                   
-                    <tr id="Document%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedInvalidation">
+                    <tr id="Document%3Avalidatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#qualifiedInvalidation">
                       <td>
                         <code property="rdfs:label">
                           <a href="http://www.w3.org/ns/prov#qualifiedInvalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#qualifiedInvalidation" data-placement="right">
-                          TODO</a>
+                          invalidatie</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/prov#Invalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Invalidation" data-placement="right">Invalidatie</a></td>
@@ -750,7 +755,7 @@
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
+                  <dt>Beschrijving</dt><dd>Natuurlijk persoon.</dd>
                   
                   <dt>Gebruik</dt><dd>In de rechtspraak betreft het een persoon (in de wettelijke betekenis, ttz met eigen rechtspersoonlijkheid) van de menselijke soort, ttz een fysiek persoon. Tegenhanger is de rechtspersoon, een juridische constructie die een private of publieke Organisatie dezelfde rechtspersoonlijkheid geeft als een natuurlijk persoon (kan bv ook schulden hebben, contracten afsluiten, aangeklaagd worden etc).</dd>
                   
@@ -840,7 +845,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -883,8 +888,8 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#Activiteit%3ATODO">TODO</a>, 
-                    <a href="#Activiteit%3ATODO">TODO</a>, 
+                    <a href="#Activiteit%3Aapplicatie">applicatie</a>, 
+                    <a href="#Activiteit%3Abewerking">bewerking</a>, 
                     <a href="#Activiteit%3Awas%20geassocieerd%20met">was geassocieerd met</a>.</dd>
                   
                 </dl>
@@ -905,10 +910,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="Activiteit%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#used">
+                    <tr id="Activiteit%3Aapplicatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#used">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/prov#used" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#used" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/prov#used" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#used" data-placement="right">applicatie</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/prov#Entity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Entity" data-placement="right">HerkomstEntiteit</a></td>
@@ -918,10 +923,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="Activiteit%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#bewerking">
+                    <tr id="Activiteit%3Abewerking" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#bewerking">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#bewerking" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#bewerking" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#bewerking" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#bewerking" data-placement="right">bewerking</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Bewerkingstype</a></td>
@@ -968,7 +973,7 @@
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
                     <a href="#Agent%3Ahandelde%20in%20opdracht%20van">handelde in opdracht van</a>, 
-                    <a href="#Agent%3ATODO">TODO</a>.</dd>
+                    <a href="#Agent%3Alabel">label</a>.</dd>
                   
                 </dl>
               </div>
@@ -1001,10 +1006,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="Agent%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
+                    <tr id="Agent%3Alabel" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#label" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#label" data-placement="right">label</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
@@ -1205,7 +1210,7 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#Entiteit%3ATODO">TODO</a>.</dd>
+                    <a href="#Entiteit%3Alabel">label</a>.</dd>
                   
                 </dl>
               </div>
@@ -1225,10 +1230,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="Entiteit%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
+                    <tr id="Entiteit%3Alabel" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#label" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#label" data-placement="right">label</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
@@ -1261,10 +1266,10 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#GeografischePositie%3ATODO">TODO</a>, 
-                    <a href="#GeografischePositie%3ATODO">TODO</a>, 
-                    <a href="#GeografischePositie%3ATODO">TODO</a>, 
-                    <a href="#GeografischePositie%3ATODO">TODO</a>.</dd>
+                    <a href="#GeografischePositie%3Adefault">default</a>, 
+                    <a href="#GeografischePositie%3Ageometrie">geometrie</a>, 
+                    <a href="#GeografischePositie%3Amethode">methode</a>, 
+                    <a href="#GeografischePositie%3Aspecificatie">specificatie</a>.</dd>
                   
                 </dl>
               </div>
@@ -1284,10 +1289,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="GeografischePositie%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#default">
+                    <tr id="GeografischePositie%3Adefault" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#default">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#default" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#default" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#default" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#default" data-placement="right">default</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
@@ -1297,10 +1302,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="GeografischePositie%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geometry">
+                    <tr id="GeografischePositie%3Ageometrie" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geometry">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/locn#geometry" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#geometry" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/locn#geometry" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#geometry" data-placement="right">geometrie</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/locn#Geometry" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#Geometry" data-placement="right">Geometrie</a></td>
@@ -1310,10 +1315,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="GeografischePositie%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#methode">
+                    <tr id="GeografischePositie%3Amethode" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#methode">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#methode" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#methode" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#methode" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#methode" data-placement="right">methode</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">GeometrieMethodeWaarde</a></td>
@@ -1323,10 +1328,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="GeografischePositie%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#specificatie">
+                    <tr id="GeografischePositie%3Aspecificatie" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#specificatie">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#specificatie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#specificatie" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#specificatie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#specificatie" data-placement="right">specificatie</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">GeometrieSpecificatieWaarde</a></td>
@@ -1590,9 +1595,6 @@
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
                 <dl>
-                  <dt>Beschrijving</dt><dd>TODO</dd>
-                  
-                  <dt>Gebruik</dt><dd>TODO</dd>
                   
                   <dt>Eigenschappen</dt>
                   
@@ -1626,8 +1628,8 @@
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">GetypeerdeString</a></td>
                       <td>1</td>
-                      <td property="rdfs:comment">TODO</td>
-                      <td property="vann:usageNote">TODO</td>
+                      <td property="rdfs:comment"></td>
+                      <td property="vann:usageNote"></td>
                       <td></td>
                     </tr>
                     
@@ -1639,8 +1641,8 @@
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">GetypeerdeString</a></td>
                       <td>0...1</td>
-                      <td property="rdfs:comment">TODO</td>
-                      <td property="vann:usageNote">TODO</td>
+                      <td property="rdfs:comment"></td>
+                      <td property="vann:usageNote"></td>
                       <td></td>
                     </tr>
                     
@@ -1655,7 +1657,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://www.w3.org/ns/prov#Invalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Invalidation" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Invalidatie"><a href="http://www.w3.org/ns/prov#Invalidation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Invalidation" data-placement="right">Invalidatie</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -1667,8 +1669,8 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>.</dd>
+                    <a href="#Invalidatie%3Aactiviteit">activiteit</a>, 
+                    <a href="#Invalidatie%3Atijdstip">tijdstip</a>.</dd>
                   
                 </dl>
               </div>
@@ -1688,10 +1690,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#activity">
+                    <tr id="Invalidatie%3Aactiviteit" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#activity">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/prov#activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#activity" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/prov#activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#activity" data-placement="right">activiteit</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/prov#Activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Activity" data-placement="right">HerkomstActiviteit</a></td>
@@ -1701,10 +1703,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
+                    <tr id="Invalidatie%3Atijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">tijdstip</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
@@ -1725,7 +1727,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://www.w3.org/ns/prov#Generation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Generation" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="Generatie"><a href="http://www.w3.org/ns/prov#Generation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Generation" data-placement="right">Generatie</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -1737,8 +1739,8 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>.</dd>
+                    <a href="#Generatie%3Aactiviteit">activiteit</a>, 
+                    <a href="#Generatie%3Atijdstip">tijdstip</a>.</dd>
                   
                 </dl>
               </div>
@@ -1758,10 +1760,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#activity">
+                    <tr id="Generatie%3Aactiviteit" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#activity">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/prov#activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#activity" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/prov#activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#activity" data-placement="right">activiteit</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/ns/prov#Activity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Activity" data-placement="right">HerkomstActiviteit</a></td>
@@ -1771,10 +1773,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
+                    <tr id="Generatie%3Atijdstip" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atTime">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">TODO</a>
+                          <a href="http://www.w3.org/ns/prov#atTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atTime" data-placement="right">tijdstip</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a></td>
@@ -1795,7 +1797,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="GetypeerdeString"><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">GetypeerdeString</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
@@ -1807,8 +1809,8 @@
                   <dt>Eigenschappen</dt>
                   
                   <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                    <a href="#TODO%3ATODO">TODO</a>, 
-                    <a href="#TODO%3ATODO">TODO</a>.</dd>
+                    <a href="#GetypeerdeString%3Astring">string</a>, 
+                    <a href="#GetypeerdeString%3Atype">type</a>.</dd>
                   
                 </dl>
               </div>
@@ -1828,10 +1830,10 @@
       
                   <tbody class="supertype">
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#string">
+                    <tr id="GetypeerdeString%3Astring" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#string">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#string" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#string" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#string" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#string" data-placement="right">string</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">String</a></td>
@@ -1841,10 +1843,10 @@
                       <td></td>
                     </tr>
                     
-                    <tr id="TODO%3ATODO" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#type">
+                    <tr id="GetypeerdeString%3Atype" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/generiek#type">
                       <td>
                         <code property="rdfs:label">
-                          <a href="http://data.vlaanderen.be/ns/generiek#type" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#type" data-placement="right">TODO</a>
+                          <a href="http://data.vlaanderen.be/ns/generiek#type" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/generiek#type" data-placement="right">type</a>
                         </code>
                       </td>
                       <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">URI</a></td>
@@ -1865,7 +1867,7 @@
       
       <div class="region region--no-space-top">
         <div class="layout layout--normal">
-          <h3 class="h3" id="TODO"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TODO</a></h3>
+          <h3 class="h3" id="GeografischeNaam"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">GeografischeNaam</a></h3>
           <div class="grid">
             <div class="col--9-12 col--1-1--s typography">
               <div class="region region--no-space-top">
