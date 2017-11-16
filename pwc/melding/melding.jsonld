@@ -27,8 +27,8 @@
 			"@type":"http://data.vlaanderen.be/ns/melding#CodelijstWaarde",
 			"@container":"@set"
 		},
-		"attribuut":{
-			"@id":"http://data.vlaanderen.be/ns/melding#attribuut",
+		"heeftEigenschap":{
+			"@id":"http://data.vlaanderen.be/ns/melding#heeftEigenschap",
 			"@type":"http://data.vlaanderen.be/ns/melding#Eigenschap",
 		},
 		"gerelateerdeBody":{
