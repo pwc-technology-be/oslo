@@ -11,8 +11,6 @@
 		"Participatie":"http://data.europa.eu/m8g/Participation",
 		"Status":"http://data.vlaanderen.be/ns/melding#Status",
 		"TijdToestand":"http://www.w3.org/ns/oa#TimeState",
-
-
 		"attribuut":{
 			"@id":"http://data.vlaanderen.be/ns/melding#attribuut",
 			"@type":"http://data.vlaanderen.be/ns/melding#Eigenschap",
@@ -20,7 +18,7 @@
 		},
 		"bereik":{
 			"@id":"http://data.vlaanderen.be/ns/melding#bereik",
-			"@type":"http://www.w3.org/2000/01/rdf-schema#Datatype",
+			"@type":"http://www.w3.org/2000/01/rdf-schema#Datatype"
 		},
 		"codelijst":{
 			"@id":"http://data.vlaanderen.be/ns/melding#codelijst",
@@ -29,7 +27,7 @@
 		},
 		"heeftEigenschap":{
 			"@id":"http://data.vlaanderen.be/ns/melding#heeftEigenschap",
-			"@type":"http://data.vlaanderen.be/ns/melding#Eigenschap",
+			"@type":"http://data.vlaanderen.be/ns/melding#Eigenschap"
 		},
 		"gerelateerdeBody":{
 			"@id":"http://data.vlaanderen.be/ns/melding#gerelateerdeBody",
